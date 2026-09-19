@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Dennis Marchuk builds automations, AI lead responders, and small tools for businesses that do the same work by hand every week. Remote from Harrisonburg, VA.">
+<link rel="canonical" href="https://marchuk.xyz/">
+<meta property="og:title" content="Dennis Marchuk builds the software that takes repetitive work off your plate">
+<meta property="og:description" content="Listing sync, AI lead responders, form filling from a photo, small tools. Fixed price, working demo before final payment.">
+<meta property="og:url" content="https://marchuk.xyz/">
+<title>Dennis Marchuk Builds</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --bg: #F5F7F3;
+    --bg-2: #EBEFE7;
+    --ink: #161A17;
+    --ink-2: #4E564F;
+    --line: #CDD4CB;
+    --accent: #1F6B47;
+    --accent-ink: #FFFFFF;
+    --accent-soft: #DCEBE1;
+    --amber: #C98A16;
+    --amber-soft: #F6E8C6;
+    --paper: #FFFFFF;
+    --shadow: 0 1px 2px rgba(22,26,23,.06), 0 12px 32px -16px rgba(22,26,23,.18);
+    --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+    --body: "IBM Plex Sans", "Segoe UI", Roboto, system-ui, sans-serif;
+    --mono: "IBM Plex Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121513; --bg-2: #1A1F1B; --ink: #EEF1EC; --ink-2: #A9B2A9; --line: #2C332D;
+      --accent: #5FBF8C; --accent-ink: #0F1A13; --accent-soft: #1B3326;
+      --amber: #E4B24A; --amber-soft: #3A2E12; --paper: #181C19;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 32px -16px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121513; --bg-2: #1A1F1B; --ink: #EEF1EC; --ink-2: #A9B2A9; --line: #2C332D;
+    --accent: #5FBF8C; --accent-ink: #0F1A13; --accent-soft: #1B3326;
+    --amber: #E4B24A; --amber-soft: #3A2E12; --paper: #181C19;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 32px -16px rgba(0,0,0,.6);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: var(--body); font-size: 17px; line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 2px solid var(--amber); outline-offset: 3px;
+  }
+  h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: balance; line-height: 1.05; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(2.4rem, 6vw, 4.4rem); font-weight: 800; }
+  h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 700; }
+  h3 { font-size: 1.25rem; font-weight: 700; }
+  p { margin: 0; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding-inline: 20px; }
+  .eyebrow {
+    font-family: var(--mono); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .measure { max-width: 62ch; }
+  section { padding-block: 72px; border-top: 1px solid var(--line); }
+  section:first-of-type { border-top: 0; }
+  .section-head { display: grid; gap: 12px; margin-bottom: 36px; }
+
+  /* nav */
+  .nav {
+    position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10;
+    background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+  .brand { font-family: var(--display); font-weight: 800; font-size: 1.1rem; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
+  .brand span { color: var(--accent); }
+  .nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 22px; font-size: .95rem; }
+  .nav ul a { color: var(--ink-2); text-decoration: none; }
+  .nav ul a:hover { color: var(--ink); }
+  .nav .cta { display: inline-block; background: var(--accent); color: var(--accent-ink); padding: 9px 14px; border-radius: 6px; font-weight: 600; text-decoration: none; font-size: .95rem; white-space: nowrap; }
+  @media (max-width: 720px) { .nav ul { display: none; } }
+
+  /* hero */
+  .hero { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; }
+  .hero-copy { display: grid; gap: 22px; }
+  .hero .lede { font-size: 1.2rem; color: var(--ink-2); max-width: 52ch; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .btn { display: inline-block; font-weight: 600; padding: 13px 20px; border-radius: 6px; text-decoration: none; border: 1px solid transparent; cursor: pointer; font-family: var(--body); font-size: 1rem; }
+  .btn-primary { background: var(--accent); color: var(--accent-ink); }
+  .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+  .btn:hover { filter: brightness(1.06); }
+  .facts { display: flex; flex-wrap: wrap; gap: 10px 22px; font-family: var(--mono); font-size: .82rem; color: var(--ink-2); }
+  @media (max-width: 860px) { .hero { grid-template-columns: 1fr; } }
+
+  /* the work order ticket */
+  .ticket {
+    background: var(--paper); border: 1px solid var(--line); border-radius: 8px; box-shadow: var(--shadow);
+    overflow: hidden; font-size: .93rem;
+  }
+  .ticket-head {
+    display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    padding: 12px 16px; border-bottom: 1px dashed var(--line); font-family: var(--mono); font-size: .78rem;
+    letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2);
+  }
+  .ticket-body { padding: 16px; display: grid; gap: 14px; }
+  .row { display: grid; grid-template-columns: 96px 1fr; gap: 12px; align-items: baseline; }
+  .row .k { font-family: var(--mono); font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); }
+  .row .v { color: var(--ink); }
+  .row .v.strike { color: var(--ink-2); text-decoration: line-through; text-decoration-color: var(--amber); }
+  .pill { display: inline-block; font-family: var(--mono); font-size: .72rem; letter-spacing: .05em; padding: 2px 8px; border-radius: 999px; }
+  .pill-live { background: var(--accent-soft); color: var(--accent); }
+  .pill-build { background: var(--amber-soft); color: var(--amber); }
+  .ticket-foot { padding: 12px 16px; border-top: 1px dashed var(--line); background: var(--bg-2); font-family: var(--mono); font-size: .78rem; color: var(--ink-2); }
+
+  /* services */
+  .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  @media (max-width: 720px) { .grid-2 { grid-template-columns: 1fr; } }
+  .svc { display: grid; gap: 10px; padding: 24px; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; }
+  .svc p { color: var(--ink-2); }
+  .svc .ex { font-family: var(--mono); font-size: .8rem; color: var(--accent); }
+
+  /* work */
+  .cases { display: grid; gap: 18px; }
+  .case { display: grid; grid-template-columns: 220px 1fr; gap: 24px; padding: 24px; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; }
+  .case .meta { display: grid; gap: 8px; align-content: start; }
+  .case .meta .who { font-family: var(--mono); font-size: .8rem; color: var(--ink-2); }
+  .case .meta h3 { font-size: 1.2rem; }
+  .case .rows { display: grid; gap: 12px; }
+  .case .rows .row { grid-template-columns: 110px 1fr; }
+  .case .rows .v { color: var(--ink); }
+  .case .rows .v.muted { color: var(--ink-2); }
+  @media (max-width: 720px) { .case { grid-template-columns: 1fr; } }
+
+  /* process (a real sequence, so numbered) */
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; counter-reset: step; }
+  .step { display: grid; gap: 8px; padding-top: 14px; border-top: 2px solid var(--line); }
+  .step::before { counter-increment: step; content: "Step " counter(step); font-family: var(--mono); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+  .step p { color: var(--ink-2); font-size: .97rem; }
+  @media (max-width: 860px) { .steps { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .steps { grid-template-columns: 1fr; } }
+
+  /* about */
+  .about { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; }
+  .about .col { display: grid; gap: 14px; align-content: start; }
+  .about p { color: var(--ink-2); }
+  .stack { display: flex; flex-wrap: wrap; gap: 8px; }
+  .stack span { font-family: var(--mono); font-size: .78rem; padding: 4px 9px; border: 1px solid var(--line); border-radius: 4px; color: var(--ink); background: var(--paper); }
+  @media (max-width: 720px) { .about { grid-template-columns: 1fr; } }
+
+  /* contact */
+  .contact { display: grid; grid-template-columns: .9fr 1.1fr; gap: 40px; }
+  .contact .col { display: grid; gap: 14px; align-content: start; }
+  .contact p { color: var(--ink-2); }
+  .direct { display: grid; gap: 6px; font-size: 1.05rem; }
+  form { display: grid; gap: 14px; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 22px; }
+  label { display: grid; gap: 6px; font-size: .9rem; font-weight: 500; }
+  input, textarea { font: inherit; font-size: 1rem; padding: 10px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink); width: 100%; }
+  textarea { min-height: 120px; resize: vertical; }
+  .hint { font-size: .85rem; color: var(--ink-2); }
+  @media (max-width: 720px) { .contact { grid-template-columns: 1fr; } }
+
+  footer { border-top: 1px solid var(--line); padding-block: 28px; font-size: .88rem; color: var(--ink-2); }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Dennis Marchuk<span>.</span></a>
+    <ul>
+      <li><a href="#services">What I build</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#process">How it works</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <a class="cta" href="#contact">Book a call</a>
+  </div>
+</header>
+
+<main id="top">
+  <section>
+    <div class="wrap hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Software engineer for hire, remote, Harrisonburg VA</p>
+        <h1>I build the software that takes the repetitive work off your plate.</h1>
+        <p class="lede">Listings that repost themselves. Leads that get answered at 9 pm. Forms that fill in from a photo. If your team does the same thing by hand every week, I can probably automate it, and I'll show you a working version before you pay for the whole thing.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Tell me what eats your time</a>
+          <a class="btn btn-ghost" href="#work">See what I've built</a>
+        </div>
+        <div class="facts">
+          <span>Fixed-price projects</span>
+          <span>Working demo before final payment</span>
+          <span>Runs on your accounts, you own the code</span>
+        </div>
+      </div>
+
+      <aside class="ticket" aria-label="Example project">
+        <div class="ticket-head"><span>Work order</span><span class="pill pill-live">Live</span></div>
+        <div class="ticket-body">
+          <div class="row"><span class="k">Client</span><span class="v">Independent used car dealer</span></div>
+          <div class="row"><span class="k">Problem</span><span class="v">160+ vehicles listed on Facebook by hand. Sold cars stayed up, new ones lagged, old listings sank in search.</span></div>
+          <div class="row"><span class="k">Built</span><span class="v">A sync that reads the dealer's inventory site, marks sold cars, posts new ones with photos, matches prices, and renews stale listings.</span></div>
+          <div class="row"><span class="k">Before</span><span class="v strike">Someone reposting listings every week</span></div>
+          <div class="row"><span class="k">After</span><span class="v">One run, one approval, done</span></div>
+        </div>
+        <div class="ticket-foot">Client name withheld. Details on request.</div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">What I build</p>
+        <h2>Four kinds of jobs I take on</h2>
+        <p class="measure">Most projects are one of these. If yours is something else, ask anyway. If I'm not the right person, I'll say so on the first call.</p>
+      </div>
+      <div class="grid-2">
+        <div class="svc">
+          <h3>Automate the weekly chore</h3>
+          <p>The thing someone on your team does every Monday: reposting, copying data between two systems, updating prices, chasing a spreadsheet.</p>
+          <span class="ex">e.g. Facebook listing sync, inventory publishing, price matching</span>
+        </div>
+        <div class="svc">
+          <h3>Answer leads when you can't</h3>
+          <p>AI assistants that draft replies to Marketplace, Messenger, and email leads using your real inventory and hours. You approve, it sends. Fully hands-off once you trust it.</p>
+          <span class="ex">e.g. after-hours lead responder, test drive booking</span>
+        </div>
+        <div class="svc">
+          <h3>Connect systems that don't talk</h3>
+          <p>Your DMS, your website, your titling system, your CRM. I make them share data so nobody types the same customer in three times.</p>
+          <span class="ex">e.g. photo of an ID and a vehicle link fills out the deal in two systems</span>
+        </div>
+        <div class="svc">
+          <h3>Small sites and internal tools</h3>
+          <p>A direct-booking site, a dashboard, a simple internal app. Built plain, hosted cheap, easy for you to keep running.</p>
+          <span class="ex">e.g. vacation rental booking site with calendar sync</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Work</p>
+        <h2>Recent projects</h2>
+        <p class="measure">Written up the way I scope them: problem, what got built, what changed. Client names left out unless they've said it's fine.</p>
+      </div>
+      <div class="cases">
+
+        <article class="case">
+          <div class="meta">
+            <span class="who">Used car dealer, Virginia</span>
+            <h3>Facebook Marketplace inventory sync</h3>
+            <span><span class="pill pill-live">Live</span></span>
+          </div>
+          <div class="rows">
+            <div class="row"><span class="k">Problem</span><span class="v">Around 160 vehicles listed individually on Marketplace and in Facebook groups. Listings drifted from the dealer's website: sold cars still up, new arrivals missing, prices out of date, old posts buried.</span></div>
+            <div class="row"><span class="k">Built</span><span class="v">A Claude-driven agent that reads the dealer's inventory site as the source of truth, marks sold vehicles, publishes new ones with photos to Marketplace and the groups, matches prices to the site, and renews stale listings. Shows its plan, gets one approval, runs.</span></div>
+            <div class="row"><span class="k">Changed</span><span class="v">The weekly repost-by-hand routine went away. Listings stay accurate without anyone checking.</span></div>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="meta">
+            <span class="who">Same dealer</span>
+            <h3>Marketplace lead responder</h3>
+            <span><span class="pill pill-build">In build</span></span>
+          </div>
+          <div class="rows">
+            <div class="row"><span class="k">Problem</span><span class="v">Buyers message on Marketplace and Messenger at all hours. Slow replies lose the sale to the next lot.</span></div>
+            <div class="row"><span class="k">Built</span><span class="v">An assistant that reads each lead, checks availability and specs from live inventory, quotes the listed price, answers financing and trade-in questions with the dealer's standard lines, and offers test drive times. Drafts go to the owner for approval first; the plan is to go fully autonomous once it's proven.</span></div>
+            <div class="row"><span class="k">Changed</span><span class="v muted">Rolling out now. Ask me how it's going.</span></div>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="meta">
+            <span class="who">Same dealer</span>
+            <h3>Deal intake from a photo</h3>
+            <span><span class="pill pill-build">In build</span></span>
+          </div>
+          <div class="rows">
+            <div class="row"><span class="k">Problem</span><span class="v">Every sale means typing the same customer and vehicle into the DMS and the DMV titling system. Slow, and typos cost real money.</span></div>
+            <div class="row"><span class="k">Built</span><span class="v">Snap the customer's ID, paste the vehicle link, and the deal gets filled in both systems. Camera first, phone camera and barcode scanner as fallbacks.</span></div>
+            <div class="row"><span class="k">Changed</span><span class="v muted">Removes the double entry and the mistakes that come with it.</span></div>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="meta">
+            <span class="who">Car dealership</span>
+            <h3>After-hours email lead responder</h3>
+            <span><span class="pill pill-build">In build</span></span>
+          </div>
+          <div class="rows">
+            <div class="row"><span class="k">Problem</span><span class="v">Email leads that arrive after closing sit until morning.</span></div>
+            <div class="row"><span class="k">Built</span><span class="v">A responder that answers email leads overnight with accurate inventory info and a next step, so the customer hears back while they're still shopping.</span></div>
+            <div class="row"><span class="k">Changed</span><span class="v muted">Built to the dealer's request; the Facebook version above grew out of it.</span></div>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="meta">
+            <span class="who">Vacation rental owners, Florida</span>
+            <h3>Direct booking website</h3>
+            <span><span class="pill pill-build">In build</span></span>
+          </div>
+          <div class="rows">
+            <div class="row"><span class="k">Problem</span><span class="v">Two rental houses booked only through Vrbo and Airbnb, paying platform fees on every stay.</span></div>
+            <div class="row"><span class="k">Built</span><span class="v">A site where repeat guests can find the houses and book direct. Phase one is contact and inquiry; then online booking; then one calendar synced across Airbnb, Vrbo, and the site so a booking anywhere blocks everywhere.</span></div>
+            <div class="row"><span class="k">Changed</span><span class="v muted">Fee savings on every direct booking.</span></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">How it works</p>
+        <h2>From "this is annoying" to running on its own</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><h3>A 20-minute call</h3><p>You walk me through the chore. I ask what systems it touches and what "done" looks like. No pitch.</p></div>
+        <div class="step"><h3>A fixed quote</h3><p>One page: what gets built, what it costs, when you'll see it. If it can't be done well, I tell you that instead.</p></div>
+        <div class="step"><h3>Build with a demo midway</h3><p>Most first projects take one to three weeks. You see it working on your real data before the final payment.</p></div>
+        <div class="step"><h3>Hand off and support</h3><p>It runs on your accounts and you own the code. Thirty days of fixes included, then a small monthly retainer if you want me on call.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div class="col">
+        <p class="eyebrow">About</p>
+        <h2>Engineer who used to work the counter</h2>
+        <p>I'm Dennis. I've been a software engineer for five years, building web frontends in TypeScript and backend services in Scala for enterprise products. Before that I spent years at a car dealership, mostly in service and parts, which is why I know what a Monday morning of manual data entry actually feels like.</p>
+        <p>These days most of what I build uses Claude and similar models to do the parts of a job that used to need a person reading a screen. I work remotely from Harrisonburg, Virginia, and I'm happy to come onsite for a kickoff when it helps.</p>
+        <p>Fluent in English and Ukrainian.</p>
+      </div>
+      <div class="col">
+        <p class="eyebrow">Tools I reach for</p>
+        <div class="stack">
+          <span>Claude Code</span><span>Claude agents and skills</span><span>TypeScript</span><span>Angular</span><span>Node</span><span>Scala</span><span>Playwright</span><span>Browser automation</span><span>Facebook Marketplace</span><span>DealerCenter</span><span>CVR</span><span>Airbnb / Vrbo APIs</span>
+        </div>
+        <p class="eyebrow" style="margin-top:18px">Good fit if</p>
+        <p>You run a small business with a repetitive process and a real budget, or you're a company that wants an engineer who will sit with your customers and build the thing, not just write a spec.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div class="col">
+        <p class="eyebrow">Contact</p>
+        <h2>Tell me what eats your time</h2>
+        <p>Send a couple of sentences about the chore. I'll reply within one business day with whether it's automatable and what a first step would cost.</p>
+        <div class="direct">
+          <a href="mailto:dvmarchuk4@gmail.com?subject=Project%20inquiry">dvmarchuk4@gmail.com</a>
+          <span class="hint">Harrisonburg, VA. Remote everywhere else.</span>
+        </div>
+      </div>
+      <form id="inquiry" onsubmit="return sendInquiry(event)">
+        <label for="f-name">Your name<input id="f-name" name="name" type="text" required autocomplete="name"></label>
+        <label for="f-biz">Business<input id="f-biz" name="business" type="text" placeholder="e.g. used car lot, 2 locations" autocomplete="organization"></label>
+        <label for="f-email">Email<input id="f-email" name="email" type="email" required autocomplete="email"></label>
+        <label for="f-msg">What do you do by hand every week that you wish you didn't?<textarea id="f-msg" name="message" required placeholder="We repost about 40 cars to Facebook every Monday and answer the same questions all day..."></textarea></label>
+        <button class="btn btn-primary" type="submit">Send</button>
+        <span class="hint">Opens in your email app with the message filled in. Nothing is stored here.</span>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Dennis Marchuk, Harrisonburg, Virginia</span>
+    <span><a href="mailto:dvmarchuk4@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/dennismarchuk" rel="me">LinkedIn</a> · <a href="https://marchuk.xyz">marchuk.xyz</a></span>
+  </div>
+</footer>
+
+<script>
+  function sendInquiry(e) {
+    e.preventDefault();
+    var f = e.target;
+    var body = "Name: " + f.name.value + "\nBusiness: " + f.business.value + "\nEmail: " + f.email.value + "\n\n" + f.message.value;
+    var url = "mailto:dvmarchuk4@gmail.com?subject=" + encodeURIComponent("Project inquiry from " + f.name.value) + "&body=" + encodeURIComponent(body);
+    window.location.href = url;
+    return false;
+  }
+</script>
+</body>
+</html>
