@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Apex Homepage Concepts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+/* Layout: a short brief, three option tabs, then one large live preview of the chosen option. */
+:root{
+  --bg:#F2F4F7;
+  --surface:#FFFFFF;
+  --fg:#132233;
+  --muted:#4C5A6A;
+  --line:#D3DAE3;
+  --accent:#1F5FAE;
+  --accent-ink:#FFFFFF;
+  --mark-bg:#FFE38A;
+  --mark-fg:#3D2F00;
+  --device:#1A2533;
+  --font:"Public Sans","Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0D1520;--surface:#152131;--fg:#E7EDF4;--muted:#9EABBB;--line:#2A3A50;--accent:#8DB8F2;--accent-ink:#0D1520;--mark-bg:#5C4B10;--mark-fg:#FFF1C2;--device:#05090F;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0D1520;--surface:#152131;--fg:#E7EDF4;--muted:#9EABBB;--line:#2A3A50;--accent:#8DB8F2;--accent-ink:#0D1520;--mark-bg:#5C4B10;--mark-fg:#FFF1C2;--device:#05090F;color-scheme:dark}
+
+*,*::before,*::after{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1240px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2{margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+a{color:var(--accent);text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+.brief{padding-block:clamp(28px,5vw,56px) clamp(20px,3vw,32px);display:grid;gap:14px}
+.for{font-size:.875rem;font-weight:600;color:var(--muted)}
+.brief h1{font-size:clamp(1.9rem,1.4rem + 2.2vw,3rem);font-weight:800;line-height:1.05;letter-spacing:-.015em;max-width:20ch}
+.brief .lead{font-size:clamp(1.02rem,.98rem + .25vw,1.15rem);max-width:64ch}
+.notes{font-size:.9375rem;color:var(--muted);max-width:70ch}
+.mark{background:var(--mark-bg);color:var(--mark-fg);font-weight:600;padding:0 .25em;border-radius:2px}
+
+.tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-block:8px 18px}
+.tab{appearance:none;font:inherit;color:inherit;text-align:left;cursor:pointer;background:var(--surface);border:1.5px solid var(--line);border-radius:8px;padding:12px 14px;display:grid;gap:8px;min-width:0;transition:border-color .15s}
+.tab:hover{border-color:var(--muted)}
+.tab[aria-selected="true"]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.tab-name{font-weight:800;font-size:1rem;line-height:1.2}
+.tab-num{display:block;font-size:.8125rem;font-weight:600;color:var(--muted)}
+.tab-line{display:none;font-size:.875rem;color:var(--muted)}
+.swatches{display:flex;gap:4px}
+.swatches i{width:18px;height:18px;border-radius:3px;box-shadow:inset 0 0 0 1px rgba(127,127,127,.35)}
+@media (min-width:760px){.tab{padding:16px 18px}.tab-line{display:block}}
+
+.panel-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:14px 24px;margin-bottom:14px}
+.panel-head > div{min-width:0}
+.panel-head h2{font-size:clamp(1.3rem,1.15rem + .7vw,1.7rem);font-weight:800}
+.panel-head p{color:var(--muted);margin-top:4px;max-width:64ch}
+.controls{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}
+.seg{display:none;border:1.5px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface)}
+.seg button{appearance:none;font:inherit;font-size:.875rem;font-weight:600;color:var(--muted);background:transparent;border:0;padding:8px 14px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+@media (min-width:760px){.seg{display:inline-flex}}
+.open{font-weight:600;font-size:.9375rem}
+
+.stage{padding-bottom:clamp(32px,5vw,64px)}
+.frame{background:var(--surface);border:1.5px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 18px 40px -24px rgba(10,20,35,.45)}
+.frame iframe{display:block;width:100%;height:clamp(560px,78vh,920px);border:0;background:#fff}
+.frame.phone{width:min(400px,100%);margin-inline:auto;border:12px solid var(--device);border-radius:38px}
+.frame.phone iframe{height:min(800px,82vh)}
+
+.foot{border-top:1px solid var(--line);padding-block:20px 32px;font-size:.875rem;color:var(--muted)}
+</style>
+<style>body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
+</head>
+<body>
+
+<header class="wrap brief">
+  <p class="for">Prepared for Apex Security Solutions, Harrisonburg, VA. November 2026.</p>
+  <h1>Three homepage concepts for apexs.us</h1>
+  <p class="lead">Each concept puts all four services on the homepage, adds a quote request form, and fixes the problems on the current site. They share the same content and differ in look. Pick the one that feels most like Apex.</p>
+  <p class="notes">Items highlighted like <span class="mark">[License #]</span> are details I still need from you. The forms are demos and don't send anything. Each page has a "What changed" list near the bottom.</p>
+</header>
+
+<main class="wrap">
+  <div class="tabs" role="tablist" aria-label="Concepts">
+    <button class="tab" role="tab" id="tab-option-1" aria-controls="stage" data-id="option-1">
+      <span><span class="tab-num">Option 1</span><span class="tab-name">Night Shift</span></span>
+      <span class="swatches" aria-hidden="true"><i style="background:#0F2236"></i><i style="background:#1D5FB4"></i><i style="background:#22A06B"></i><i style="background:#EEF1F4"></i></span>
+      <span class="tab-line">Deep navy with an alarm panel that arms itself as the page loads.</span>
+    </button>
+    <button class="tab" role="tab" id="tab-option-2" aria-controls="stage" data-id="option-2">
+      <span><span class="tab-num">Option 2</span><span class="tab-name">Site Plan</span></span>
+      <span class="swatches" aria-hidden="true"><i style="background:#FFFFFF"></i><i style="background:#1B2430"></i><i style="background:#1F5FAE"></i><i style="background:#C2362B"></i></span>
+      <span class="tab-line">Light and simple, led by a camera layout plan and room for real photos.</span>
+    </button>
+    <button class="tab" role="tab" id="tab-option-3" aria-controls="stage" data-id="option-3">
+      <span><span class="tab-num">Option 3</span><span class="tab-name">Blueprint</span></span>
+      <span class="swatches" aria-hidden="true"><i style="background:#16437A"></i><i style="background:#FFD54A"></i><i style="background:#FFFFFF"></i><i style="background:#0E2440"></i></span>
+      <span class="tab-line">The whole page drawn as a blueprint, with camera coverage marked in yellow.</span>
+    </button>
+  </div>
+
+  <section id="stage" class="stage" role="tabpanel" aria-labelledby="tab-option-1">
+    <div class="panel-head">
+      <div>
+        <h2 id="opt-title">Option 1: Night Shift</h2>
+        <p id="opt-desc"></p>
+      </div>
+      <div class="controls">
+        <div class="seg" role="group" aria-label="Preview size">
+          <button type="button" id="size-desktop" aria-pressed="true">Desktop</button>
+          <button type="button" id="size-phone" aria-pressed="false">Phone</button>
+        </div>
+        <a class="open" id="opt-open" href="option-1.html" target="_blank" rel="noopener">Open full page</a>
+      </div>
+    </div>
+    <div class="frame" id="frame">
+      <iframe id="preview" src="option-1.html" title="Option 1: Night Shift homepage concept"></iframe>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap foot">Concepts for review only. Nothing here is live on apexs.us.</footer>
+
+<script>
+(function () {
+  var options = {
+    'option-1': { title: 'Option 1: Night Shift', desc: 'Deep navy bands with a bright blue call button. The hero shows an alarm keypad that arms its four zones (front door, shop camera, job site gate, smoke detector) as the page loads. The most familiar layout of the three.' },
+    'option-2': { title: 'Option 2: Site Plan', desc: 'A light, quiet page led by a camera layout drawn like an installer’s plan. Fewer sections and plenty of space for real photos of your crew and your installs.' },
+    'option-3': { title: 'Option 3: Blueprint', desc: 'The boldest option. The page is drawn as a blueprint, with each camera’s coverage marked in yellow, and each service shown as a small detail drawing.' }
+  };
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  var stage = document.getElementById('stage');
+  var frame = document.getElementById('frame');
+  var preview = document.getElementById('preview');
+  var title = document.getElementById('opt-title');
+  var desc = document.getElementById('opt-desc');
+  var open = document.getElementById('opt-open');
+  var bDesk = document.getElementById('size-desktop');
+  var bPhone = document.getElementById('size-phone');
+
+  function show(id) {
+    if (!options[id]) id = 'option-1';
+    tabs.forEach(function (t) {
+      var on = t.getAttribute('data-id') === id;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+    });
+    stage.setAttribute('aria-labelledby', 'tab-' + id);
+    title.textContent = options[id].title;
+    desc.textContent = options[id].desc;
+    open.href = id + '.html';
+    if (preview.getAttribute('src') !== id + '.html') preview.setAttribute('src', id + '.html');
+    preview.title = options[id].title + ' homepage concept';
+  }
+  function fromHash() { show((location.hash || '').replace('#', '')); }
+
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { location.hash = t.getAttribute('data-id'); });
+    t.addEventListener('keydown', function (e) {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      var next = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+      next.focus();
+      location.hash = next.getAttribute('data-id');
+    });
+  });
+  window.addEventListener('hashchange', fromHash);
+
+  function size(phone) {
+    frame.classList.toggle('phone', phone);
+    bDesk.setAttribute('aria-pressed', phone ? 'false' : 'true');
+    bPhone.setAttribute('aria-pressed', phone ? 'true' : 'false');
+  }
+  bDesk.addEventListener('click', function () { size(false); });
+  bPhone.addEventListener('click', function () { size(true); });
+
+  fromHash();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#16437A">
+<title>Apex Security Solutions | Cameras and Alarms in Harrisonburg, VA (Design Concept)</title>
+<meta name="description" content="Security cameras, alarms, job site monitoring, and fire alarm systems installed by a family owned Harrisonburg company. Design concept.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;500;600;800;900&display=swap" rel="stylesheet">
+<style>
+/* Adjust --print to sit near the lion blue in the logo. */
+:root{
+  --print:#16437A;
+  --print-deep:#0F325D;
+  --print-line:rgba(255,255,255,.82);
+  --print-soft:rgba(255,255,255,.74);
+  --mark:#FFD54A;
+  --mark-dark:#E9B913;
+  --fire-on-print:#FF8577;
+  --fire:#C9302C;
+  --paper:#F5F7F9;
+  --white:#FFFFFF;
+  --ink:#0E2440;
+  --ink-soft:#43546A;
+  --rule:#C9D3DE;
+
+  --font:"Overpass","Helvetica Neue",Arial,sans-serif;
+  --fs-body:1.0625rem;
+  --fs-small:.9375rem;
+  --fs-h1:clamp(2.5rem,1.7rem + 3.2vw,4.25rem);
+  --fs-h2:clamp(2rem,1.45rem + 2.4vw,3.2rem);
+  --fs-h3:clamp(1.25rem,1.15rem + .4vw,1.45rem);
+
+  --gutter:clamp(16px,4vw,48px);
+  --max:1240px;
+  --section:clamp(64px,4rem + 4vw,120px);
+  --r:3px;
+  --grid-a:rgba(255,255,255,.075);
+  --grid-b:rgba(255,255,255,.035);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scrollbar-color:var(--print) var(--paper);accent-color:var(--print)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+::selection{background:var(--mark);color:var(--ink)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:var(--fs-body);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip;caret-color:var(--print)}
+img,svg{display:block;max-width:100%}
+h1,h2,h3{margin:0;text-wrap:balance}
+h1{font-size:var(--fs-h1);font-weight:900;line-height:.95;letter-spacing:-.02em}
+h2{font-size:var(--fs-h2);font-weight:800;line-height:1.02;letter-spacing:-.015em}
+h3{font-size:var(--fs-h3);font-weight:800;line-height:1.15}
+p{margin:0 0 1em;max-width:62ch;text-wrap:pretty}
+a{color:var(--print);text-underline-offset:4px;text-decoration-thickness:1.5px}
+a:hover{color:var(--print-deep);text-decoration-thickness:2.5px}
+:focus-visible{outline:3px solid var(--print);outline-offset:3px}
+.on-print :focus-visible{outline-color:var(--mark)}
+[id]{scroll-margin-top:84px}
+.wrap{width:min(100% - 2 * var(--gutter),var(--max));margin-inline:auto}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--mark);color:var(--ink);padding:8px 12px;z-index:100;font-weight:800}
+.skip:focus{left:8px}
+
+/* blueprint ground */
+.on-print{background-color:var(--print);color:var(--white);
+  background-image:
+    radial-gradient(110% 70% at 75% 20%,rgba(255,255,255,.07),transparent 65%),
+    linear-gradient(var(--grid-a) 1px,transparent 1px),
+    linear-gradient(90deg,var(--grid-a) 1px,transparent 1px),
+    linear-gradient(var(--grid-b) 1px,transparent 1px),
+    linear-gradient(90deg,var(--grid-b) 1px,transparent 1px);
+  background-size:auto,96px 96px,96px 96px,24px 24px,24px 24px}
+.on-print a:not(.btn){color:var(--white)}
+.on-print a:not(.btn):hover{color:var(--mark)}
+.on-print ::selection{background:var(--mark);color:var(--ink)}
+
+/* placeholders read as markup notes */
+.ph{background:linear-gradient(transparent 12%,rgba(255,213,74,.55) 12%,rgba(255,213,74,.55) 88%,transparent 88%);color:var(--ink);font-weight:600;padding:0 .2em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.on-print .ph{background:none;color:var(--mark);border-bottom:2px dashed var(--mark);padding:0}
+
+/* concept banner */
+.concept{background:var(--print-deep);color:rgba(255,255,255,.8);font-size:.8125rem;line-height:1.4;text-align:center;padding:7px 16px}
+.concept a{color:var(--mark)}
+
+/* header */
+.site-header{position:sticky;top:0;z-index:40;background:var(--print);border-bottom:1px solid rgba(255,255,255,.22);transition:box-shadow .2s}
+.site-header.scrolled{box-shadow:0 6px 18px -8px rgba(5,20,40,.55)}
+.header-row{display:flex;align-items:center;gap:16px;height:66px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--white);min-width:0}
+.brand:hover{color:var(--white)}
+.logo{width:42px;height:42px;flex:none;display:grid;place-items:center;background:#fff;border-radius:var(--r);overflow:hidden}
+.logo img{width:100%;height:100%;object-fit:contain}
+.logo svg{display:none;width:72%;height:72%}
+.logo.missing img{display:none}
+.logo.missing svg{display:block}
+.brand-text{display:flex;flex-direction:column;line-height:1.05}
+.brand-name{font-weight:900;font-size:1.35rem;letter-spacing:-.01em}
+.brand-sub{font-size:.75rem;font-weight:600;color:var(--print-soft)}
+.nav{display:none;margin-left:auto;gap:30px}
+.nav a{color:var(--white);text-decoration:none;font-weight:600}
+.nav a:hover{color:var(--mark);text-decoration:underline}
+.header-call{margin-left:auto}
+.header-call .long{display:none}
+@media (min-width:900px){
+  .nav{display:flex}
+  .header-call{margin-left:14px}
+  .header-call .short{display:none}
+  .header-call .long{display:inline}
+  .header-row{height:76px}
+}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:10px 22px;max-width:100%;border-radius:var(--r);border:2px solid transparent;font-family:var(--font);font-weight:800;font-size:1.0625rem;line-height:1.1;text-align:center;text-decoration:none;cursor:pointer;transition:background-color .15s,color .15s,border-color .15s,box-shadow .15s}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-mark{background:var(--mark);color:var(--ink);box-shadow:0 2px 0 var(--mark-dark),0 10px 20px -10px rgba(0,0,0,.45)}
+.btn-mark:hover{background:#FFE07A;color:var(--ink);text-decoration:none}
+.btn-ghost{border-color:rgba(255,255,255,.75);color:var(--white)}
+.btn-ghost:hover{border-color:var(--white);background:rgba(255,255,255,.1);color:var(--white);text-decoration:none}
+.btn-print{background:var(--print);color:var(--white);box-shadow:0 10px 20px -12px rgba(14,36,64,.6)}
+.btn-print:hover{background:var(--print-deep);color:var(--white);text-decoration:none}
+.header-call{min-height:44px;padding:8px 16px}
+.icon{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* hero sheet */
+.hero{padding:clamp(28px,4vw,56px) 0 clamp(40px,5vw,72px)}
+.sheet{border:1.5px solid rgba(255,255,255,.45);outline:1px solid rgba(255,255,255,.18);outline-offset:6px;padding:clamp(20px,3.2vw,44px)}
+.hero-top{display:grid;gap:28px}
+.hero h1{color:var(--white)}
+.hero .lead{font-size:clamp(1.1rem,1rem + .45vw,1.35rem);line-height:1.5;color:var(--print-soft);margin:22px 0 0;max-width:36em}
+.title-block{border:1.5px solid var(--print-line);background:rgba(15,50,93,.55);backdrop-filter:blur(2px);display:grid}
+.title-block > *{padding:14px 18px}
+.title-block > * + *{border-top:1px solid rgba(255,255,255,.35)}
+.tb-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;white-space:nowrap;font-size:.875rem;color:var(--print-soft);font-weight:600}
+.tb-phone{white-space:nowrap;font-weight:900;font-size:clamp(1.7rem,1.3rem + 1.4vw,2.3rem);line-height:1;color:var(--mark);text-decoration:none;display:block;letter-spacing:-.01em}
+.on-print a.tb-phone{color:var(--mark)}
+.on-print a.tb-phone:hover{color:#FFE48A}
+.tb-phone small{display:block;font-size:.875rem;font-weight:600;color:var(--print-soft);letter-spacing:0;margin-top:8px}
+.tb-actions{display:grid;gap:10px}
+.tb-actions .btn{width:100%}
+.plan-wrap{margin-top:clamp(28px,3.5vw,40px)}
+.plan{width:100%;height:auto;overflow:visible}
+.plan .w{fill:none;stroke:var(--white);stroke-width:4}
+.plan .iw{stroke:rgba(255,255,255,.72);stroke-width:2}
+.plan .gap{fill:var(--print)}
+.plan .sw{fill:none;stroke:rgba(255,255,255,.7);stroke-width:1.5}
+.plan .drive{fill:rgba(255,255,255,.08)}
+.plan .street{stroke:rgba(255,255,255,.45);stroke-width:2;stroke-dasharray:16 12}
+.plan .room{fill:rgba(255,255,255,.55);font-family:var(--font);font-size:17px;font-weight:600}
+.plan .street-name{fill:rgba(255,255,255,.5);font-family:var(--font);font-size:15px;font-weight:600}
+.plan .cone{fill:url(#hatch);stroke:var(--mark);stroke-width:1.5;stroke-linejoin:round}
+.plan .cam{fill:var(--mark);stroke:var(--print);stroke-width:3}
+.plan .camnum{fill:var(--ink);font-family:var(--font);font-size:15px;font-weight:900;text-anchor:middle;dominant-baseline:central}
+.plan .ring{fill:none;stroke:var(--mark);stroke-width:2.5;stroke-linecap:round}
+.plan .sensor{fill:none;stroke:var(--mark);stroke-width:3}
+.plan .smoke{fill:none;stroke:var(--fire-on-print);stroke-width:3}
+.plan .smokedot{fill:var(--fire-on-print)}
+.plan .keypad{fill:var(--white)}
+.plan .lbl{fill:var(--mark);font-family:var(--font);font-size:18px;font-weight:800}
+.plan .leader{stroke:var(--mark);stroke-width:1.5;fill:none}
+@media (max-width:720px){.plan .lbl,.plan .leader,.plan .room,.plan .street-name{display:none}}
+@media (prefers-reduced-motion:no-preference){
+  .plan .cone{animation:fade-cone .8s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(.4s + var(--i) * .35s)}
+  .plan .ring{stroke-dasharray:150;animation:draw-ring .9s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(.3s + var(--i) * .35s)}
+  @keyframes fade-cone{from{opacity:0}to{opacity:1}}
+  @keyframes draw-ring{from{stroke-dashoffset:150}to{stroke-dashoffset:0}}
+}
+.plan-key{list-style:none;margin:20px 0 0;padding:16px 0 0;border-top:1px solid rgba(255,255,255,.3);display:grid;grid-template-columns:1fr;gap:10px 28px;font-size:var(--fs-small);color:var(--print-soft)}
+.plan-key li{display:flex;align-items:center;gap:10px;min-width:0}
+.plan-key svg{width:20px;height:20px;flex:none}
+.plan-key .num{width:22px;height:22px;flex:none;border-radius:50%;background:var(--mark);color:var(--ink);font-weight:900;font-size:.8125rem;display:grid;place-items:center;line-height:1;padding-top:2px}
+.plan-key .cap{grid-column:1 / -1;font-size:.8125rem;color:rgba(255,255,255,.6);margin-top:4px}
+.towns{margin:28px 0 0;font-size:var(--fs-small);color:var(--print-soft)}
+.towns strong{color:var(--white);font-weight:800}
+@media (min-width:600px){.plan-key{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:980px){
+  .hero-top{grid-template-columns:minmax(0,1fr) 360px;gap:56px;align-items:end}
+  .plan-key{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+
+/* paper sections */
+.section{padding:var(--section) 0}
+.section-head{max-width:40em;margin-bottom:clamp(28px,3.5vw,52px)}
+.section-head p{color:var(--ink-soft);margin:14px 0 0;font-size:clamp(1.05rem,1rem + .2vw,1.15rem)}
+
+/* services as detail drawings */
+.details{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;border-top:1.5px solid var(--ink);border-left:1.5px solid var(--ink)}
+.details li{border-right:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);padding:clamp(20px,2.4vw,32px);display:grid;gap:18px;background:var(--white);min-width:0}
+.detail-art{background:var(--paper);border:1px solid var(--rule);background-image:linear-gradient(rgba(22,67,122,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(22,67,122,.06) 1px,transparent 1px);background-size:16px 16px}
+.detail-art svg{width:100%;height:auto}
+.d .ln{fill:none;stroke:var(--print);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.d .ln2{fill:none;stroke:var(--print);stroke-width:1.5;stroke-linecap:round}
+.d .fill{fill:var(--print)}
+.d .cone{fill:var(--mark);opacity:.55}
+.d .fire{fill:none;stroke:var(--fire);stroke-width:2.5}
+.d .firef{fill:var(--fire)}
+.d .dash{stroke-dasharray:6 6}
+.details h3{margin-bottom:8px}
+.details p{color:var(--ink-soft);margin-bottom:14px}
+.details .ask{font-weight:800}
+@media (min-width:760px){.details{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* review */
+.review-grid{display:grid;gap:36px}
+.quote{margin:0}
+.quote blockquote{margin:0;font-weight:800;font-size:clamp(1.6rem,1.15rem + 2vw,2.7rem);line-height:1.14;letter-spacing:-.01em;color:var(--white);text-wrap:pretty}
+.quote figcaption{margin-top:24px;color:var(--print-soft);font-size:var(--fs-small)}
+.quote figcaption strong{display:block;color:var(--white);font-weight:800;font-size:1.0625rem}
+.review-more{margin-top:28px;display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;font-size:var(--fs-small)}
+.photo-slot{margin:0;aspect-ratio:4/5;border:2px dashed rgba(255,255,255,.55);display:grid;place-items:center;padding:24px;text-align:center;font-size:var(--fs-small);background:repeating-linear-gradient(135deg,transparent 0 14px,rgba(255,255,255,.05) 14px 15px)}
+.photo-slot.light{aspect-ratio:4/3;border-color:var(--rule);background:repeating-linear-gradient(135deg,transparent 0 14px,rgba(22,67,122,.07) 14px 15px),var(--white)}
+@media (min-width:960px){.review-grid{grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:72px;align-items:center}}
+
+/* about */
+.about-grid{display:grid;gap:36px}
+.about-copy p{font-size:clamp(1.05rem,1rem + .25vw,1.2rem)}
+.spec{margin:32px 0 0;border:1.5px solid var(--ink);background:var(--white)}
+.spec div{display:grid;grid-template-columns:minmax(0,42%) minmax(0,1fr);border-bottom:1px solid var(--rule)}
+.spec dd{overflow-wrap:anywhere}
+@media (min-width:600px){.spec div{grid-template-columns:minmax(0,12em) minmax(0,1fr)}}
+.spec div:last-child{border-bottom:0}
+.spec dt,.spec dd{margin:0;padding:12px 16px}
+.spec dt{font-weight:800;border-right:1px solid var(--rule)}
+.spec dd{color:var(--ink-soft)}
+@media (min-width:960px){.about-grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;align-items:start}}
+
+/* quote */
+.quote-grid{display:grid;gap:40px}
+.quote-intro h2{color:var(--white)}
+.quote-intro .lead{color:var(--print-soft);margin-top:14px}
+.big-phone{display:inline-block;white-space:nowrap;font-weight:900;font-size:clamp(2.1rem,1.3rem + 3.6vw,3.6rem);line-height:1;letter-spacing:-.02em;text-decoration:none;margin:22px 0 8px}
+.on-print a.big-phone{color:var(--mark)}
+.on-print a.big-phone:hover{color:#FFE48A}
+.contact-list{margin:28px 0 0;border-top:1px solid rgba(255,255,255,.3)}
+.contact-list div{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.3)}
+.contact-list dt{font-weight:800;font-size:var(--fs-small)}
+.contact-list dd{margin:2px 0 0;color:var(--print-soft);overflow-wrap:anywhere}
+.form-card{background:var(--white);color:var(--ink);padding:clamp(22px,3vw,36px);box-shadow:0 30px 60px -28px rgba(3,15,32,.7),0 2px 6px rgba(3,15,32,.18);border-top:6px solid var(--mark)}
+.form-card h3{margin-bottom:20px}
+.fields{display:grid;grid-template-columns:1fr;gap:16px}
+.field label{display:block;font-weight:700;font-size:var(--fs-small);margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;min-height:50px;padding:12px 13px;font:inherit;font-size:16px;color:var(--ink);background:var(--white);border:1.5px solid #8392A5;border-radius:var(--r);transition:border-color .15s,box-shadow .15s}
+.field textarea{min-height:124px;resize:vertical}
+.field select{appearance:none;-webkit-appearance:none;padding-right:42px;background:var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2316437A' stroke-width='2.4'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 12px center/18px}
+.field input:hover,.field select:hover,.field textarea:hover{border-color:var(--print)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--print);box-shadow:0 0 0 4px rgba(22,67,122,.2)}
+.field input:user-invalid{border-color:var(--fire)}
+.field ::placeholder{color:#6B7A8C}
+.full{grid-column:1 / -1}
+.form-card .btn{margin-top:22px;width:100%}
+.form-note{font-size:.875rem;color:var(--ink-soft);margin:12px 0 0}
+.sent{margin:16px 0 0;padding:12px 14px;background:#FFF6D6;border:1.5px solid var(--mark-dark);font-size:var(--fs-small)}
+.sent[hidden]{display:none}
+@media (min-width:600px){.fields{grid-template-columns:1fr 1fr}.form-card .btn{width:auto}}
+@media (min-width:960px){.quote-grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;align-items:start}}
+
+/* revisions */
+.revisions-wrap{padding:44px 0 60px}
+.revisions{max-width:860px;border:1.5px solid var(--ink);background:var(--white)}
+.revisions summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:16px 20px;font-weight:800;font-size:1.15rem}
+.revisions summary::-webkit-details-marker{display:none}
+.revisions summary:hover{color:var(--print)}
+.revisions summary svg{width:20px;height:20px;margin-left:auto;flex:none}
+@media (prefers-reduced-motion:no-preference){.revisions summary svg{transition:transform .2s cubic-bezier(.16,1,.3,1)}}
+.revisions[open] summary svg{transform:rotate(180deg)}
+.revisions ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.revisions li{padding:12px 20px;border-bottom:1px solid var(--rule);font-size:var(--fs-small)}
+.revisions li:last-child{border-bottom:0}
+
+/* footer */
+.site-footer{padding:52px 0 30px;font-size:var(--fs-small);color:var(--print-soft);background-color:var(--print-deep)}
+.foot-grid{display:grid;gap:28px}
+.foot-list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.foot-bottom{margin-top:36px;padding-top:18px;border-top:1px solid rgba(255,255,255,.2);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+@media (min-width:760px){.foot-grid{grid-template-columns:1.5fr 1fr 1fr;align-items:start}}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="m-sensor" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" fill="none" stroke="#FFD54A" stroke-width="2.5"/></symbol>
+  <symbol id="m-smoke" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="#FF8577" stroke-width="2.5"/><circle cx="12" cy="12" r="2.5" fill="#FF8577"/></symbol>
+  <symbol id="m-keypad" viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="10" rx="1" fill="#fff"/></symbol>
+  <symbol id="logo-fallback" viewBox="0 0 24 24"><path d="M12 2 4 5.5v6c0 4.8 3.4 8.8 8 10 4.6-1.2 8-5.2 8-10v-6z" fill="#16437A"/><text x="12" y="15.5" text-anchor="middle" font-size="8" font-weight="800" fill="#fff" font-family="Arial">A</text></symbol>
+</svg>
+
+<div class="concept">Design concept for Apex Security Solutions. Not the live site. <a href="#changes">See what changed</a></div>
+
+<header class="site-header on-print">
+  <div class="wrap header-row">
+    <a class="brand" href="#top" aria-label="Apex Security Solutions, back to top">
+      <span class="logo"><img src="https://apexs.us/wp-content/uploads/2024/08/IMG_0926.jpeg" alt="" onerror="this.parentNode.classList.add('missing')"><svg aria-hidden="true"><use href="#logo-fallback"/></svg></span>
+      <span class="brand-text"><span class="brand-name">Apex</span><span class="brand-sub">Security Solutions</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About</a>
+      <a href="#quote">Free quote</a>
+    </nav>
+    <a class="btn btn-mark header-call" href="tel:+15405605741" aria-label="Call Apex at (540) 560-5741">
+      <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span class="short">Call</span><span class="long">(540) 560-5741</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero on-print">
+  <div class="wrap">
+    <div class="sheet">
+      <div class="hero-top">
+        <div>
+          <h1>Cameras and alarms, installed by a Harrisonburg family.</h1>
+          <p class="lead">Apex lays out and installs security and fire alarm systems for homes, businesses, and job sites across Rockingham County. Quotes are free, and if a camera needs moving after the install, we come back and move it.</p>
+        </div>
+        <div class="title-block">
+          <div class="tb-row"><span>Apex Security Solutions</span><span>Harrisonburg, VA</span></div>
+          <a class="tb-phone" href="tel:+15405605741">(540) 560-5741<small>Call for a free quote</small></a>
+          <div class="tb-actions">
+            <a class="btn btn-mark" href="#quote">Request a free quote</a>
+          </div>
+        </div>
+      </div>
+
+      <figure class="plan-wrap" style="margin-left:0;margin-right:0;margin-bottom:0">
+        <svg class="plan" viewBox="0 0 1200 540" role="img" aria-labelledby="plan-title">
+          <defs><pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="9" height="9" fill="#FFD54A" fill-opacity=".1"/><line x1="0" y1="0" x2="0" y2="9" stroke="#FFD54A" stroke-width="2.2" stroke-opacity=".75"/></pattern></defs>
+          <title id="plan-title">Example camera and alarm layout for a house with a detached shop: four cameras with their coverage marked in yellow, door and window sensors, three smoke detectors, and a keypad by the front door</title>
+
+          <rect class="drive" x="850" y="360" width="140" height="180"/>
+          <rect class="drive" x="240" y="420" width="32" height="120"/>
+          <line class="street" x1="0" y1="510" x2="1200" y2="510"/>
+          <text class="street-name" x="470" y="532">Street</text>
+
+          <polygon class="cone" style="--i:0" points="126,414 150,540 345,540"/>
+          <polygon class="cone" style="--i:1" points="634,414 700,540 905,540"/>
+          <polygon class="cone" style="--i:2" points="640,252 780,190 780,310"/>
+          <polygon class="cone" style="--i:3" points="1054,354 960,540 1180,540"/>
+
+          <rect class="w" x="120" y="90" width="520" height="330"/>
+          <line class="iw" x1="340" y1="90" x2="340" y2="250"/>
+          <line class="iw" x1="120" y1="250" x2="470" y2="250"/>
+          <line class="iw" x1="470" y1="90" x2="470" y2="420"/>
+          <line class="iw" x1="470" y1="200" x2="640" y2="200"/>
+          <rect class="gap" x="228" y="416" width="52" height="8"/>
+          <path class="sw" d="M228 420 L228 372 A48 48 0 0 1 276 420"/>
+          <rect class="gap" x="116" y="140" width="8" height="46"/>
+          <path class="sw" d="M120 140 L162 140 A42 42 0 0 1 120 182"/>
+          <rect class="gap" x="372" y="246" width="44" height="8"/>
+          <rect class="gap" x="466" y="296" width="8" height="40"/>
+          <rect class="gap" x="520" y="196" width="40" height="8"/>
+
+          <rect class="w" x="780" y="130" width="280" height="230"/>
+          <rect class="gap" x="840" y="356" width="160" height="8"/>
+          <line class="iw" x1="840" y1="360" x2="1000" y2="360" style="stroke-dasharray:8 6"/>
+          <rect class="gap" x="776" y="200" width="8" height="40"/>
+
+          <text class="room" x="168" y="178">Kitchen</text>
+          <text class="room" x="362" y="178">Dining</text>
+          <text class="room" x="510" y="150">Bedroom</text>
+          <text class="room" x="510" y="320">Bedroom</text>
+          <text class="room" x="168" y="342">Living room</text>
+          <text class="room" x="884" y="252">Shop</text>
+
+          <rect class="sensor" x="244" y="396" width="14" height="14"/>
+          <rect class="sensor" x="130" y="156" width="14" height="14"/>
+          <rect class="sensor" x="790" y="213" width="14" height="14"/>
+          <rect class="sensor" x="200" y="83" width="14" height="14"/>
+          <rect class="sensor" x="400" y="83" width="14" height="14"/>
+          <rect class="sensor" x="560" y="83" width="14" height="14"/>
+          <rect class="sensor" x="913" y="123" width="14" height="14"/>
+
+          <circle class="smoke" cx="405" cy="210" r="11"/><circle class="smokedot" cx="405" cy="210" r="3.5"/>
+          <circle class="smoke" cx="555" cy="250" r="11"/><circle class="smokedot" cx="555" cy="250" r="3.5"/>
+          <circle class="smoke" cx="980" cy="200" r="11"/><circle class="smokedot" cx="980" cy="200" r="3.5"/>
+
+          <rect class="keypad" x="294" y="396" width="22" height="14" rx="2"/>
+
+          <circle class="ring" style="--i:0" cx="126" cy="414" r="22"/>
+          <circle class="cam" cx="126" cy="414" r="13"/><text class="camnum" x="126" y="415">1</text>
+          <circle class="ring" style="--i:1" cx="634" cy="414" r="22"/>
+          <circle class="cam" cx="634" cy="414" r="13"/><text class="camnum" x="634" y="415">2</text>
+          <circle class="ring" style="--i:2" cx="640" cy="252" r="22"/>
+          <circle class="cam" cx="640" cy="252" r="13"/><text class="camnum" x="640" y="253">3</text>
+          <circle class="ring" style="--i:3" cx="1054" cy="354" r="22"/>
+          <circle class="cam" cx="1054" cy="354" r="13"/><text class="camnum" x="1054" y="355">4</text>
+
+          <path class="leader" d="M96 430 L60 470"/><text class="lbl" x="20" y="490">Front walk</text>
+          <path class="leader" d="M612 430 L582 462"/><text class="lbl" x="494" y="482">Driveway</text>
+          <path class="leader" d="M664 238 L690 200"/><text class="lbl" x="660" y="190">Side yard</text>
+          <path class="leader" d="M1078 336 L1110 300"/><text class="lbl" x="1068" y="290">Shop door</text>
+        </svg>
+        <ul class="plan-key" aria-label="Plan key">
+          <li><span class="num">1</span>Front walk and porch</li>
+          <li><span class="num">2</span>Driveway and street</li>
+          <li><span class="num">3</span>Side yard to the shop</li>
+          <li><span class="num">4</span>Shop overhead door</li>
+          <li><svg aria-hidden="true"><use href="#m-sensor"/></svg>Door and window sensors</li>
+          <li><svg aria-hidden="true"><use href="#m-smoke"/></svg>Smoke detectors</li>
+          <li><svg aria-hidden="true"><use href="#m-keypad"/></svg>Keypad by the front door</li>
+          <li class="cap">Example layout for a house with a detached shop. Yellow marks what each camera sees.</li>
+        </ul>
+      </figure>
+
+      <p class="towns"><strong>Serving</strong> Harrisonburg, Bridgewater, Broadway, Dayton, Elkton, Timberville, McGaheysville, and the rest of Rockingham County.</p>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>What we install</h2>
+      <p>Four kinds of systems, all planned, installed, and supported by the same local crew.</p>
+    </div>
+    <ul class="details">
+      <li>
+        <div class="detail-art">
+          <svg class="d" viewBox="0 0 320 170" aria-hidden="true">
+            <path class="ln" d="M60 150 V82 L160 30 L260 82 V150"/>
+            <path class="ln" d="M44 90 L160 30 L276 90"/>
+            <rect class="ln" x="140" y="104" width="34" height="46"/>
+            <rect class="ln2" x="82" y="100" width="34" height="26"/>
+            <rect class="ln2" x="202" y="100" width="34" height="26"/>
+            <path class="ln2" d="M20 150 H300"/>
+            <polygon class="cone" points="246,96 192,150 300,150"/>
+            <rect class="fill" x="238" y="86" width="16" height="10" rx="2"/>
+            <rect class="ln2" x="146" y="112" width="8" height="8"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Home security</h3>
+          <p>Door and window sensors, indoor and outdoor cameras, and remote viewing so you can check on the house from your phone. Many insurers discount premiums for homes with a security system, so ask your agent.</p>
+          <a class="ask" href="#quote" data-service="Home security">Ask about home security</a>
+        </div>
+      </li>
+      <li>
+        <div class="detail-art">
+          <svg class="d" viewBox="0 0 320 170" aria-hidden="true">
+            <rect class="ln" x="50" y="40" width="220" height="110"/>
+            <path class="ln" d="M40 40 H280 L268 62 H52 Z"/>
+            <rect class="ln2" x="66" y="76" width="110" height="74"/>
+            <rect class="ln2" x="196" y="76" width="56" height="74"/>
+            <path class="ln2" d="M20 150 H300"/>
+            <polygon class="cone" points="62,74 70,150 150,150"/>
+            <rect class="fill" x="56" y="66" width="14" height="9" rx="2"/>
+            <polygon class="cone" points="262,74 200,150 262,150"/>
+            <rect class="fill" x="252" y="66" width="14" height="9" rx="2"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Business security</h3>
+          <p>Inside and outside camera systems and alarms for shops, offices, and storefronts, with cameras placed so the footage is easy to review online.</p>
+          <a class="ask" href="#quote" data-service="Business security">Ask about business security</a>
+        </div>
+      </li>
+      <li>
+        <div class="detail-art">
+          <svg class="d" viewBox="0 0 320 170" aria-hidden="true">
+            <path class="ln2" d="M20 150 H300"/>
+            <path class="ln" d="M70 150 V44"/>
+            <path class="ln" d="M56 150 H84"/>
+            <rect class="fill" x="70" y="36" width="20" height="12" rx="2"/>
+            <polygon class="cone" points="86,46 150,150 286,150"/>
+            <path class="ln2 dash" d="M110 110 H300"/>
+            <path class="ln2" d="M120 110 V150 M180 110 V150 M240 110 V150 M300 110 V150"/>
+            <rect class="ln" x="160" y="128" width="70" height="8"/>
+            <rect class="ln" x="168" y="120" width="54" height="8"/>
+            <path class="ln" d="M236 150 V126 H262 L276 140 V150"/>
+            <circle class="ln" cx="246" cy="150" r="7"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Job site monitoring</h3>
+          <p>Cameras that watch equipment, materials, and entrances on active construction sites, so you can check the site after the crew goes home. <span class="ph">[Add how job site cameras are powered and connected]</span></p>
+          <a class="ask" href="#quote" data-service="Job site monitoring">Ask about job site monitoring</a>
+        </div>
+      </li>
+      <li>
+        <div class="detail-art">
+          <svg class="d" viewBox="0 0 320 170" aria-hidden="true">
+            <path class="ln" d="M30 34 H290"/>
+            <path class="ln" d="M240 34 V150"/>
+            <path class="ln2" d="M30 150 H290"/>
+            <path class="ln2" d="M100 34 V42"/>
+            <circle class="fire" cx="100" cy="52" r="13"/>
+            <circle class="firef" cx="100" cy="52" r="4"/>
+            <path class="ln2 dash" d="M78 74 Q100 86 122 74"/>
+            <path class="ln2 dash" d="M70 88 Q100 104 130 88"/>
+            <rect class="fire" x="214" y="70" width="20" height="28" rx="2"/>
+            <circle class="firef" cx="224" cy="80" r="4"/>
+            <rect class="fire" x="214" y="112" width="20" height="20" rx="2"/>
+            <path class="ln2" d="M224 120 V126"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Fire alarms</h3>
+          <p>Low voltage fire alarm systems, including panels, detectors, and notification devices. <span class="ph">[Add the inspection or code work you handle]</span></p>
+          <a class="ask" href="#quote" data-service="Fire alarms">Ask about fire alarms</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="reviews" class="section on-print">
+  <div class="wrap review-grid">
+    <div>
+      <h2 class="section-head" style="color:var(--white)">In a customer's words</h2>
+      <figure class="quote">
+        <!-- Condensed from the Morris Heating Google review. Paste the exact review text before publishing. -->
+        <blockquote>David and his partner installed a new security system inside and outside our business in two days, then came back to reposition the cameras so online viewing was easier.</blockquote>
+        <figcaption><strong>Morris Heating</strong>Google review</figcaption>
+      </figure>
+      <div class="review-more">
+        <a href="https://maps.app.goo.gl/vzvEujmwr5ooqj2XA" target="_blank" rel="noopener">Read more reviews on Google</a>
+        <span class="ph">[Add two or three more Google reviews here]</span>
+      </div>
+    </div>
+    <figure class="photo-slot"><span class="ph">Photo to add: a camera David's crew installed at a local business</span></figure>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="wrap about-grid">
+    <figure class="photo-slot light" style="margin:0"><span class="ph">Photo to add: the Apex crew with the work truck</span></figure>
+    <div class="about-copy">
+      <h2 class="section-head">A family business from Harrisonburg</h2>
+      <p>Apex Security Solutions is family owned and based in Harrisonburg. You deal with the family that runs the business, not a faceless corporation, and we know the area because we live here.</p>
+      <p>Our technicians are trained to install, maintain, and troubleshoot every system we put in. We keep quotes affordable by sizing the system to your property instead of selling you a package.</p>
+      <dl class="spec">
+        <div><dt>Virginia license</dt><dd><span class="ph">[License #]</span></dd></div>
+        <div><dt>In business since</dt><dd><span class="ph">[Year]</span></dd></div>
+        <div><dt>Insured</dt><dd><span class="ph">[Confirm coverage]</span></dd></div>
+        <div><dt>Service area</dt><dd>Harrisonburg and Rockingham County</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="quote" class="section on-print">
+  <div class="wrap quote-grid">
+    <div class="quote-intro">
+      <h2>Get a free quote</h2>
+      <p class="lead">Call, or send a few details about the property and we'll get back to you.</p>
+      <a class="big-phone" href="tel:+15405605741">(540) 560-5741</a>
+      <dl class="contact-list">
+        <div><dt>Email</dt><dd><a href="mailto:info@apexs.us">info@apexs.us</a> <span class="ph">[Confirm email. The current site lists Info@apexsafety.us]</span></dd></div>
+        <div><dt>Hours</dt><dd><span class="ph">[Business hours]</span></dd></div>
+      </dl>
+    </div>
+
+    <div class="form-card">
+      <h3>Send a quote request</h3>
+      <form id="quote-form" novalidate>
+        <div class="fields">
+          <div class="field"><label for="q-name">Name</label><input id="q-name" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="q-phone">Phone</label><input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
+          <div class="field"><label for="q-email">Email (optional)</label><input id="q-email" name="email" type="email" autocomplete="email"></div>
+          <div class="field"><label for="q-service">What do you need?</label>
+            <select id="q-service" name="service">
+              <option value="">Choose one</option>
+              <option>Home security</option>
+              <option>Business security</option>
+              <option>Job site monitoring</option>
+              <option>Fire alarms</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="field full"><label for="q-msg">About the property</label><textarea id="q-msg" name="message" rows="4" maxlength="600" placeholder="Town, type of property, and what you want covered"></textarea></div>
+        </div>
+        <button class="btn btn-print" type="submit">Send quote request</button>
+        <p class="form-note">Demo form. It doesn't send anything.</p>
+        <p id="sent" class="sent" role="status" tabindex="-1" hidden>Quote request not sent, because this is a demo. On the live site it would go straight to Apex.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div id="changes" class="revisions-wrap">
+  <div class="wrap">
+    <details class="revisions">
+      <summary>Revisions from the current site<svg class="icon" aria-hidden="true"><use href="#i-chev"/></svg></summary>
+      <ul>
+        <li>Fixed the home benefits heading that read "The benefits of Unarmed and Armed Security Officer."</li>
+        <li>All four services are on the homepage, including job site monitoring and fire alarms.</li>
+        <li>"Get a free quote" now has a quote form instead of only phone links. On this concept it is a demo and sends nothing.</li>
+        <li>Replaced four paragraphs of generic filler with short, specific copy about who Apex is and what you install.</li>
+        <li>The footer logo linked to an unrelated website (breakdancelibrary.com). The logo now goes to the top of the page.</li>
+        <li>Removed the newsletter sign up and the raw Google link.</li>
+        <li>Updated the copyright year to 2026.</li>
+        <li>Flagged the email. The footer lists Info@apexsafety.us, which doesn't match the apexs.us website.</li>
+        <li>Phone first on mobile, with a call button that stays at the top of the screen.</li>
+        <li>Marked where real photos of your crew and installs should go. Real photos earn more trust than stock images.</li>
+      </ul>
+    </details>
+  </div>
+</div>
+
+</main>
+
+<footer class="site-footer on-print">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top" aria-label="Back to top">
+          <span class="logo"><img src="https://apexs.us/wp-content/uploads/2024/08/IMG_0926.jpeg" alt="" onerror="this.parentNode.classList.add('missing')"><svg aria-hidden="true"><use href="#logo-fallback"/></svg></span>
+          <span class="brand-text"><span class="brand-name">Apex</span><span class="brand-sub">Security Solutions</span></span>
+        </a>
+        <p style="margin-top:14px">Family owned security and fire alarm systems for Harrisonburg and Rockingham County.</p>
+      </div>
+      <ul class="foot-list">
+        <li><a href="tel:+15405605741">(540) 560-5741</a></li>
+        <li><a href="mailto:info@apexs.us">info@apexs.us</a></li>
+        <li>Harrisonburg, VA</li>
+      </ul>
+      <ul class="foot-list">
+        <li><a href="https://g.co/kgs/gk7fxAL" target="_blank" rel="noopener">Find us on Google</a></li>
+        <li><a href="https://maps.app.goo.gl/vzvEujmwr5ooqj2XA" target="_blank" rel="noopener">Read our Google reviews</a></li>
+      </ul>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Apex Security Solutions</span>
+      <a href="#top">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var header = document.querySelector('.site-header');
+  var onScroll = function () { header.classList.toggle('scrolled', window.scrollY > 8); };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  var select = document.getElementById('q-service');
+  document.querySelectorAll('[data-service]').forEach(function (a) {
+    a.addEventListener('click', function () { select.value = a.getAttribute('data-service'); });
+  });
+
+  var form = document.getElementById('quote-form');
+  var sent = document.getElementById('sent');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    sent.hidden = false;
+    form.reset();
+    sent.focus();
+  });
+
+  var details = document.querySelector('details.revisions');
+  document.querySelectorAll('a[href="#changes"]').forEach(function (a) {
+    a.addEventListener('click', function () { details.open = true; });
+  });
+});
+</script>
+</body>
+</html>
