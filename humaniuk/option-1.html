@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Oleksii Humaniuk, Harrisonburg REALTOR and mortgage broker (concept 1: Yard Sign)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&family=Fira+Sans+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Yard Sign: the navy and white of his own sign panel, a red the eye finds from the road, post wood, Valley grass */
+  --navy:#14243f;
+  --sign:#ffffff;
+  --paper:#f4f5f2;
+  --red:#b5121b;
+  --wood:#7a5634;
+  --grass:#4d6b37;
+  --ink:#1b2230;
+  --ink-2:#4a5263;
+  --on-navy-2:#b9c4d8;
+  --display:"Fira Sans Condensed","Fira Sans",sans-serif;
+  --body:"Fira Sans",sans-serif;
+  /* layout: familiar local agent site. Sign in the hero, then services, listings, Oleksii, reviews, towns, contact */
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scrollbar-color:var(--navy) var(--paper);accent-color:var(--red);-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--body);font-size:1.0625rem;line-height:1.6;color:var(--ink);background:var(--paper);caret-color:var(--red)}
+::selection{background:var(--navy);color:#fff}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--navy);text-underline-offset:.2em;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:var(--display);line-height:1.05;margin:0 0 .5em;text-wrap:balance;letter-spacing:.005em}
+h2{font-size:clamp(2rem,4.5vw,2.9rem);font-weight:700;color:var(--navy);margin-top:0}
+h3{font-size:1.5rem;font-weight:700;color:var(--navy)}
+p{margin:0 0 1em;max-width:65ch}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.nowrap{white-space:nowrap}
+.ph{background:linear-gradient(transparent 12%,#ffe45c 12%,#ffe45c 88%,transparent 88%);padding:0 .25em;font-weight:600;color:#3b3000;overflow-wrap:anywhere}
+
+.concept{background:var(--ink);color:#e9ecf2;font-size:.85rem;text-align:center;padding:6px 12px}
+
+header.top{background:var(--sign);border-bottom:1px solid #dfe2e8}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--navy)}
+.brand strong{font-family:var(--display);font-size:1.6rem;font-weight:800;line-height:1}
+.brand img{height:14px;width:auto;margin-top:6px}
+nav.main{display:none;gap:22px}
+nav.main a{text-decoration:none;font-weight:600;font-size:.98rem}
+nav.main a:hover{text-decoration:underline}
+.callbtn{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:10px 16px;border-radius:3px;white-space:nowrap}
+.callbtn:hover{background:#97101a}
+.callbtn svg{width:18px;height:18px}
+@media(min-width:900px){nav.main{display:flex}}
+@media(max-width:519px){header.top .callbtn{display:none}}
+
+.hero{background:var(--navy);color:#fff;overflow:hidden}
+.hero .wrap{display:grid;gap:28px;padding-top:40px;padding-bottom:0}
+.hero h1{font-size:clamp(2.3rem,6.4vw,3.5rem);font-weight:800;color:#fff}
+.hero p.lede{font-size:1.15rem;color:#dfe5f0}
+.hero .phone{font-family:var(--display);font-size:clamp(2rem,6vw,2.8rem);font-weight:700;color:#fff;text-decoration:none;white-space:nowrap;display:inline-block;margin:.1em 0 .3em}
+.hero .phone:hover{text-decoration:underline}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0 28px}
+.btn-ghost{display:inline-block;color:#fff;border:2px solid #fff;padding:9px 16px;border-radius:3px;text-decoration:none;font-weight:700}
+.btn-ghost:hover{background:#fff;color:var(--navy)}
+.hero .small{font-size:.95rem;color:var(--on-navy-2)}
+.signwrap{align-self:end;max-width:540px;width:100%;margin:0 auto}
+.signwrap svg{display:block;width:100%;height:auto}
+#panel{transform-origin:300px 112px;transform-box:view-box}
+@media (prefers-reduced-motion:no-preference){#panel{animation:swing 2.4s ease-out 1}}
+@keyframes swing{0%{transform:rotate(-3deg)}35%{transform:rotate(2deg)}65%{transform:rotate(-.8deg)}100%{transform:rotate(0)}}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1.05fr .95fr;align-items:end;padding-top:48px}.hero .copy{padding-bottom:48px}}
+
+section{padding:64px 0}
+.work{background:var(--sign)}
+.work .cols{display:grid;gap:36px}
+.work ul{padding-left:1.1em;margin:0 0 1em}
+.work li{margin-bottom:.35em}
+.work h3 small{display:block;font-family:var(--body);font-size:1rem;font-weight:500;color:var(--ink-2);margin-top:4px}
+@media(min-width:860px){.work .cols{grid-template-columns:repeat(3,1fr);gap:44px}}
+
+.listings .grid{display:grid;gap:24px}
+@media(min-width:760px){.listings .grid{grid-template-columns:repeat(3,1fr)}}
+.listing{background:var(--sign);border:1px solid #dcdfe5}
+.slot{aspect-ratio:4/3;background:repeating-linear-gradient(135deg,#e7eaef 0 12px,#eef0f3 12px 24px);display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;color:var(--ink-2);font-size:.92rem}
+.listing .info{padding:16px 18px 18px}
+.listing .price{font-family:var(--display);font-size:1.7rem;font-weight:700;color:var(--navy);margin:0}
+.listing .addr{font-weight:600;margin:0}
+.listing .facts{color:var(--ink-2);font-size:.95rem;margin:.3em 0 0}
+.note{font-size:.95rem;color:var(--ink-2)}
+
+.about{background:var(--sign)}
+.about .wrap{display:grid;gap:36px}
+.about figure{margin:0}
+.about figure img{width:100%;height:auto;aspect-ratio:1252/1313;object-fit:cover}
+.about figcaption{font-size:.9rem;color:var(--ink-2);margin-top:8px}
+.numbers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 24px;margin:24px 0;padding:20px 0;border-top:1px solid #dcdfe5;border-bottom:1px solid #dcdfe5}
+.numbers div{font-size:.95rem;color:var(--ink-2)}
+.numbers b{display:block;font-family:var(--display);font-size:2.2rem;line-height:1;color:var(--navy)}
+.langs{font-weight:600}
+@media(min-width:860px){.about .wrap{grid-template-columns:.85fr 1.15fr;align-items:start}}
+
+.reviews .list{display:grid;gap:28px}
+@media(min-width:860px){.reviews .list{grid-template-columns:repeat(2,1fr)}}
+blockquote{margin:0;padding:0 0 0 20px;border-left:2px solid var(--navy)}
+blockquote p{font-size:1.05rem}
+blockquote footer{font-weight:700;color:var(--navy)}
+.stars{color:#a8740a;letter-spacing:2px}
+.gline{margin-top:28px;font-weight:600}
+
+.towns{background:var(--navy);color:#fff}
+.towns h2{color:#fff}
+.towns .cols{display:grid;gap:28px}
+.towns h3{color:#fff;font-size:1.3rem}
+.towns p{color:var(--on-navy-2)}
+.towns a{color:#fff}
+@media(min-width:860px){.towns .cols{grid-template-columns:repeat(3,1fr)}}
+
+.contact .wrap{display:grid;gap:40px}
+@media(min-width:860px){.contact .wrap{grid-template-columns:1fr 1fr}}
+.contact dl{margin:0}
+.contact dt{font-weight:700;color:var(--navy);margin-top:14px}
+.contact dd{margin:0}
+form{background:var(--sign);border:1px solid #dcdfe5;padding:22px}
+label{display:block;font-weight:600;margin:12px 0 4px}
+input,select,textarea{width:100%;font:inherit;padding:10px 12px;border:1px solid #9aa2b1;border-radius:3px;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--navy);outline-offset:1px;border-color:var(--navy)}
+input:user-invalid{border-color:var(--red);background:#fff6f6}
+.opt{font-weight:400;color:var(--ink-2)}
+button.send{margin-top:16px;background:var(--red);color:#fff;border:0;font:inherit;font-weight:700;padding:12px 20px;border-radius:3px;cursor:pointer}
+button.send:hover{background:#97101a}
+.sent{display:none;margin-top:14px;padding:12px;background:#eef3ea;border:1px solid var(--grass);color:#24361a}
+form.done .sent{display:block}
+
+.changes{padding:40px 0;background:var(--sign);border-top:1px solid #dcdfe5}
+details summary{cursor:pointer;font-family:var(--display);font-size:1.5rem;font-weight:700;color:var(--navy)}
+details ul{max-width:75ch}
+details li{margin-bottom:.5em}
+
+footer.site{background:var(--ink);color:#c9cfdb;font-size:.93rem;padding:36px 0 96px}
+footer.site a{color:#fff}
+footer.site img{height:14px;width:auto;margin-bottom:12px}
+@media(min-width:760px){footer.site{padding-bottom:36px}}
+
+.sticky{position:fixed;left:0;right:0;bottom:0;display:flex;gap:0;z-index:20;box-shadow:0 -2px 10px rgba(20,36,63,.25)}
+.sticky a{flex:1;text-align:center;padding:14px 8px;font-weight:700;text-decoration:none}
+.sticky .c{background:var(--red);color:#fff}
+.sticky .t{background:var(--navy);color:#fff}
+@media(min-width:760px){.sticky{display:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+</svg>
+
+<div class="concept">Design concept for Oleksii Humaniuk. Not the live site.</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Oleksii Humaniuk, home">
+      <strong>Oleksii Humaniuk</strong>
+      <img src="https://humaniuk.homes/wp-content/themes/humaniuk-luxury/assets/img/remax-ink.png" alt="RE/MAX Performance Realty" width="120" height="21">
+    </a>
+    <nav class="main" aria-label="Main">
+      <a href="#work">Buy</a><a href="#work">Sell</a><a href="#work">Refinance</a><a href="#listings">Listings</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="callbtn" href="tel:+15408309017"><svg aria-hidden="true"><use href="#i-phone"/></svg>540.830.9017</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div class="copy">
+      <h1 id="h1">Buying or selling in the Shenandoah Valley? I handle the house and the loan.</h1>
+      <p class="lede">I'm a REALTOR with RE/MAX Performance Realty and a licensed mortgage broker in Harrisonburg. One call gets you an agent who can also tell you what you can borrow.</p>
+      <a class="phone" href="tel:+15408309017">540.830.9017</a>
+      <div class="actions">
+        <a class="callbtn" href="sms:+15408309017">Call or text me</a>
+        <a class="btn-ghost" href="#contact">Book a free consultation</a>
+      </div>
+      <p class="small">English, Українська, Русский</p>
+    </div>
+    <div class="signwrap">
+      <svg viewBox="0 0 600 470" role="img" aria-labelledby="signT">
+        <title id="signT">A yard sign: For Sale, Oleksii Humaniuk, 540.830.9017, with riders for mortgage broker and the languages he speaks</title>
+        <!-- post -->
+        <rect x="70" y="40" width="22" height="430" fill="#7a5634"/>
+        <rect x="70" y="92" width="290" height="20" fill="#7a5634"/>
+        <rect x="70" y="40" width="22" height="430" fill="none" stroke="#5b3f25" stroke-width="2"/>
+        <g id="panel">
+          <line x1="190" y1="112" x2="190" y2="140" stroke="#cfd5df" stroke-width="3"/>
+          <line x1="330" y1="112" x2="330" y2="140" stroke="#cfd5df" stroke-width="3"/>
+          <rect x="130" y="140" width="260" height="170" fill="#fff" stroke="#b5121b" stroke-width="6"/>
+          <text x="260" y="196" text-anchor="middle" font-family="Fira Sans Condensed, sans-serif" font-weight="800" font-size="50" fill="#b5121b">For Sale</text>
+          <image href="https://humaniuk.homes/wp-content/themes/humaniuk-luxury/assets/img/remax-ink.png" x="200" y="210" width="120" height="21"/>
+          <text x="260" y="262" text-anchor="middle" font-family="Fira Sans Condensed, sans-serif" font-weight="700" font-size="27" fill="#14243f">Oleksii Humaniuk</text>
+          <text x="260" y="294" text-anchor="middle" font-family="Fira Sans Condensed, sans-serif" font-weight="800" font-size="30" fill="#14243f">540.830.9017</text>
+          <line x1="190" y1="310" x2="190" y2="322" stroke="#cfd5df" stroke-width="3"/>
+          <line x1="330" y1="310" x2="330" y2="322" stroke="#cfd5df" stroke-width="3"/>
+          <rect x="130" y="322" width="260" height="40" fill="#b5121b"/>
+          <text x="260" y="350" text-anchor="middle" font-family="Fira Sans Condensed, sans-serif" font-weight="700" font-size="19" fill="#fff">REALTOR and mortgage broker</text>
+          <line x1="190" y1="362" x2="190" y2="372" stroke="#cfd5df" stroke-width="3"/>
+          <line x1="330" y1="362" x2="330" y2="372" stroke="#cfd5df" stroke-width="3"/>
+          <rect x="130" y="372" width="260" height="36" fill="#fff" stroke="#14243f" stroke-width="2"/>
+          <text x="260" y="397" text-anchor="middle" font-family="Fira Sans Condensed, sans-serif" font-weight="600" font-size="19" fill="#14243f">Говорю українською</text>
+        </g>
+        <!-- ground -->
+        <path d="M0 450 C120 438 220 446 320 440 S520 434 600 444 L600 470 L0 470 Z" fill="#4d6b37"/>
+        <path d="M30 450 l6 -14 l4 14 M140 446 l5 -12 l4 12 M450 440 l6 -13 l3 13 M540 443 l5 -12 l4 12" stroke="#6f8f55" stroke-width="2" fill="none"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work" aria-labelledby="work-h">
+  <div class="wrap">
+    <h2 id="work-h">What I can do for you</h2>
+    <div class="cols">
+      <div>
+        <h3>Buying a home<small>First home, vacation place, land or new construction</small></h3>
+        <ul>
+          <li>A free first meeting, in person, by phone or on video</li>
+          <li>Your real budget and pre-approval, done by me. You're free to use any lender.</li>
+          <li>Live MLS alerts and tours, including for buyers still out of state</li>
+          <li>Offers priced from recent nearby sales. One recent buyer saved $15,000 in price drops and repairs.</li>
+          <li>Inspection, appraisal, financing and title, through the final walkthrough</li>
+        </ul>
+        <p>Virginia Housing, first-time buyer grants, FHA, VA and USDA loans are all on the table.</p>
+      </div>
+      <div>
+        <h3>Selling a home<small>Find out what it's worth, then list it right</small></h3>
+        <ul>
+          <li>A price backed by local comparable sales, not an online estimate</li>
+          <li>Your home value by text within 24 hours</li>
+          <li>Professional photos, staging advice, and your listing on the major buyer sites</li>
+          <li>I check every buyer's pre-approval myself, so fewer deals fall apart</li>
+          <li>Commission is negotiable and put in writing before you sign</li>
+        </ul>
+        <p><a href="#contact">Ask for your home value</a></p>
+      </div>
+      <div>
+        <h3>Refinancing<small>See if a new loan saves you money</small></h3>
+        <ul>
+          <li>Your new payment, monthly savings and break-even time</li>
+          <li>Rates checked against the weekly Freddie Mac average</li>
+          <li>Mortgage brokered through Alcova Mortgage</li>
+        </ul>
+        <p class="note">Oleksii Humaniuk, NMLS #2578791. Alcova Mortgage, NMLS #40508. Not a commitment to lend.</p>
+        <p><a href="https://humaniuk.homes/refinance/">Try the refinance calculator</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="listings" id="listings" aria-labelledby="list-h">
+  <div class="wrap">
+    <h2 id="list-h">My listings right now</h2>
+    <!-- On the live site these come from the MLS feed, as they do today. -->
+    <div class="grid">
+      <article class="listing">
+        <div class="slot">MLS photo: front of 3961 Oak Ridge Rd</div>
+        <div class="info"><p class="price">$2,690,000</p><p class="addr">3961 Oak Ridge Rd, Mount Crawford</p><p class="facts">6 beds, 7 baths, 10,599 sq ft, 10.49 acres</p></div>
+      </article>
+      <article class="listing">
+        <div class="slot">MLS photo: front of 1670 Briarcrest Dr</div>
+        <div class="info"><p class="price">$500,000</p><p class="addr">1670 Briarcrest Dr, Rockingham</p><p class="facts">5 beds, 4 baths, 3,882 sq ft, 0.3 acres</p></div>
+      </article>
+      <article class="listing">
+        <div class="slot">MLS photo: front of 10235 Dalmatian Dr</div>
+        <div class="info"><p class="price">$420,000</p><p class="addr">10235 Dalmatian Dr, McGaheysville</p><p class="facts">3 beds, 3 baths, 2,032 sq ft, 0.17 acres</p></div>
+      </article>
+    </div>
+    <p class="note" style="margin-top:18px">Also listed outside the Valley: 0.95 acres at 20576 Ashburn Rd, Ashburn (Loudoun County), $900,000. <a href="https://humaniuk.homes/my-listings/">See every listing</a></p>
+  </div>
+</section>
+
+<section class="about" id="about" aria-labelledby="about-h">
+  <div class="wrap">
+    <figure>
+      <img src="https://humaniuk.homes/wp-content/themes/humaniuk-luxury/assets/img/hero.jpg" alt="Oleksii Humaniuk at his desk with a laptop" width="1252" height="1313" loading="lazy">
+      <figcaption>Oleksii at work in Harrisonburg</figcaption>
+    </figure>
+    <div>
+      <h2 id="about-h">Born in Ukraine, in the Valley since 2014</h2>
+      <p>I went to Eastern Mennonite High School and Bridgewater College, and I've sold homes here ever since. Because I'm also a licensed mortgage broker, your offer, your pre-approval and your closing date stay on one person's desk.</p>
+      <p>My promise is the same whether it's a starter home or a large estate: honesty, discretion, and hard work for you.</p>
+      <div class="numbers">
+        <div><b>99</b>homes sold</div>
+        <div><b>$33.0M</b>in total sales</div>
+        <div><b>63</b>sold in the past 2 years</div>
+        <div><b>5.0</b>on Google, 45 reviews</div>
+      </div>
+      <p class="langs">I speak English, Ukrainian and Russian.</p>
+      <p class="note">RealTrends Verified agent. Virginia real estate license <span class="ph">[License #]</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" aria-labelledby="rev-h">
+  <div class="wrap">
+    <h2 id="rev-h">Five people who closed with me</h2>
+    <div class="list">
+      <!-- Reviews copied from the current site. Paste the exact Google text before launch. -->
+      <blockquote><p class="stars" aria-label="5 stars">★★★★★</p><p>Oleksii is wonderful! Eddie and I have purchased and sold many properties over the years. Oleksii was the very best agent we've ever had. Smart, professional, hard working, creative and a great personality! He was always available and the personal touches and care he showed were admirable. A five star rating doesn't seem high enough.</p><footer>Denise Morris</footer></blockquote>
+      <blockquote><p class="stars" aria-label="5 stars">★★★★★</p><p>Oleksii did such a great [job] finding us a home and helping us sell our home. He always went above and beyond with anything we needed and he was really easy to work with schedule wise. You won't regret working with him!</p><footer>Heidy Godinez</footer></blockquote>
+      <blockquote><p class="stars" aria-label="5 stars">★★★★★</p><p>We had a great experience working with Oleksii to buy a vacation property. He was available whenever we had questions and was flexible to help us look at homes from out of state. Highly recommend!</p><footer>Andrew Worden</footer></blockquote>
+      <blockquote><p class="stars" aria-label="5 stars">★★★★★</p><p>Oleksii was great to work with! He was professional, responsive, and always willing to help and answer my questions. He made the process much easier and less stressful. I truly appreciate his help and would highly recommend him!</p><footer>Asuncion Bautista</footer></blockquote>
+      <blockquote><p class="stars" aria-label="5 stars">★★★★★</p><p>Oleksii did an amazing job helping us buy our house. He was very professional and quick to respond to any questions or concerns we had. The whole process was easy and efficient; we're looking forward to working with him again in the future!</p><footer>Dennis Kutsyi</footer></blockquote>
+    </div>
+    <p class="gline">5.0 from 45 reviews. <a href="https://www.google.com/search?q=Oleksii+Humaniuk+RE%2FMAX+Performance+Realty+Harrisonburg">Find us on Google</a></p>
+  </div>
+</section>
+
+<section class="towns" aria-labelledby="towns-h">
+  <div class="wrap">
+    <h2 id="towns-h">Where I sell homes</h2>
+    <div class="cols">
+      <div><h3>Harrisonburg</h3><p>Old Town, Downtown, Park View, Northside Village, Cobblers Valley, Preston Lake, Congers Creek and Crossroads Farm</p></div>
+      <div><h3>Rockingham County</h3><p>Bridgewater, McGaheysville, Dayton, Penn Laird, Mount Crawford, Broadway, Elkton and Timberville</p></div>
+      <div><h3>Around the Valley</h3><p>Staunton, Waynesboro, Augusta County, Shenandoah County, Page County, Massanutten and Bryce Resort</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="con-h">
+  <div class="wrap">
+    <div>
+      <h2 id="con-h">Let's talk about your move</h2>
+      <p>The first conversation is free and there's no pressure. Call, text, or send the form and I'll get back to you.</p>
+      <dl>
+        <dt>Call or text</dt><dd><a class="nowrap" href="tel:+15408309017">540.830.9017</a></dd>
+        <dt>Email</dt><dd><a href="mailto:oleksii@humaniuk.homes">oleksii@humaniuk.homes</a></dd>
+        <dt>Office</dt><dd>RE/MAX Performance Realty<br>2511 E Market St, Ste A<br>Harrisonburg, VA 22801</dd>
+        <dt>Office hours</dt><dd><span class="ph">[Office hours]</span></dd>
+      </dl>
+    </div>
+    <form id="f" novalidate>
+      <h3>Book a free consultation</h3>
+      <label for="n">Name</label><input id="n" name="n" required autocomplete="name">
+      <label for="p">Phone</label><input id="p" name="p" type="tel" required autocomplete="tel">
+      <label for="e">Email <span class="opt">(optional)</span></label><input id="e" name="e" type="email" autocomplete="email">
+      <label for="s">I'm looking to</label>
+      <select id="s" name="s"><option>Buy a home</option><option>Sell a home</option><option>Buy and sell</option><option>Refinance</option><option>Something else</option></select>
+      <label for="m">Message</label><textarea id="m" name="m" rows="4"></textarea>
+      <button class="send" type="submit">Send my request</button>
+      <p class="sent" role="status">This is a design concept, so nothing was sent. On the live site this goes straight to Oleksii.</p>
+    </form>
+  </div>
+</section>
+
+<section class="changes" aria-label="What changed">
+  <div class="wrap">
+    <details>
+      <summary>What changed from the current site</summary>
+      <ul>
+        <li>The phone number and "call or text" are in the first screen, with a tap to call bar on phones.</li>
+        <li>The homepage numbers appeared twice. They're shown once here, next to Oleksii.</li>
+        <li>The Ashburn lot (Loudoun County) sat under "across the Shenandoah Valley". It's now labeled as outside the Valley.</li>
+        <li>Two of the five Google reviews were hidden behind "Show more reviews". All five show, and the stray "G" before the rating is gone.</li>
+        <li>"See all 9 areas" showed three. Every town and neighborhood is listed.</li>
+        <li>The footer "Book a Consultation" button linked to "#". Every booking link now goes to the form.</li>
+        <li>NMLS numbers (#2578791 and Alcova Mortgage #40508) were only on the refinance page. They're now on the homepage, where loans are offered.</li>
+        <li>No office hours are listed anywhere. There's a placeholder for them.</li>
+        <li>Services are written as what Oleksii actually does, instead of luxury template phrases.</li>
+        <li>Photos have alt text and the menu button has a label.</li>
+        <li>To fix at the source: Oak Ridge Rd copy says 8,900 sq ft but the stats say 10,599; Briarcrest says nearly 3,000 but the stats say 3,882; "Dont" and "an highly" in listing text; "Mcgaheysville" capitalization from the feed.</li>
+        <li>Also on inner pages: stray "Edit" and "Website" labels on the seller forms, all three how-to video thumbnails link to the same page, and the meta and social descriptions are identical.</li>
+      </ul>
+    </details>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <img src="https://humaniuk.homes/wp-content/themes/humaniuk-luxury/assets/img/remax-white.png" alt="RE/MAX Performance Realty" width="120" height="21">
+    <p>Oleksii Humaniuk, REALTOR, RE/MAX Performance Realty, 2511 E Market St, Ste A, Harrisonburg, VA 22801. Licensed in Virginia. Equal Housing Opportunity.</p>
+    <p>Mortgage broker: Oleksii Humaniuk, NMLS #2578791, through Alcova Mortgage, NMLS #40508.</p>
+    <p>© 2026 Oleksii Humaniuk. <a href="https://humaniuk.homes/privacy-policy/">Privacy policy</a></p>
+  </div>
+</footer>
+
+<div class="sticky"><a class="c" href="tel:+15408309017">Call 540.830.9017</a><a class="t" href="sms:+15408309017">Text me</a></div>
+
+<script>
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  if(!this.checkValidity()){this.reportValidity();return}
+  this.classList.add('done');
+});
+</script>
+</body>
+</html>

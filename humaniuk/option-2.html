@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Oleksii Humaniuk, Harrisonburg REALTOR and mortgage broker (concept 2: Survey Plat)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Survey Plat: drafting paper, surveyor's ink, Massanutten contour green, and the pink of survey flagging tape for the one action */
+  --paper:#f2f4f0;
+  --sheet:#fbfcfa;
+  --ink:#1d3349;
+  --ink-2:#4b5966;
+  --contour:#6b7f5c;
+  --rule:#c8d0cb;
+  --flag:#c41e63;
+  --serif:"Source Serif 4",Georgia,serif;
+  --label:"Overpass",sans-serif;
+  /* layout: one large plat of the Valley up top, then a few quiet sections in a single column */
+}
+*{box-sizing:border-box}
+html{scrollbar-color:var(--contour) var(--paper);accent-color:var(--flag);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--label);font-size:1.05rem;line-height:1.65;caret-color:var(--flag)}
+::selection{background:#f6c6da;color:var(--ink)}
+a{color:var(--ink);text-underline-offset:.22em;text-decoration-color:var(--flag);text-decoration-thickness:1.5px}
+a:hover{text-decoration-thickness:3px}
+:focus-visible{outline:3px solid var(--flag);outline-offset:3px}
+img{max-width:100%;height:auto;display:block}
+h1,h2{font-family:var(--serif);font-weight:600;line-height:1.12;text-wrap:balance;margin:0 0 .5em}
+h2{font-size:clamp(1.7rem,3.6vw,2.3rem)}
+h3{font-family:var(--label);font-size:1.12rem;font-weight:700;margin:0 0 .3em}
+p{margin:0 0 1em;max-width:62ch}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+.nowrap{white-space:nowrap}
+.ph{display:inline-block;background:#ffd9e8;border:1px dashed var(--flag);color:#6d0f36;padding:0 .4em;font-weight:600;overflow-wrap:anywhere}
+
+.concept{background:var(--ink);color:#e4ebf2;text-align:center;font-size:.85rem;padding:6px 12px}
+header{padding:18px 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.name{font-family:var(--serif);font-size:1.35rem;font-weight:600;text-decoration:none;color:var(--ink);line-height:1.1}
+.name span{display:block;font-family:var(--label);font-size:.85rem;font-weight:400;color:var(--ink-2)}
+.tel{font-weight:700;white-space:nowrap}
+.btn{display:inline-block;background:var(--flag);color:#fff;text-decoration:none;font-weight:700;padding:11px 18px;border-radius:2px;white-space:nowrap}
+.btn:hover{background:#a3164f}
+
+.hero{padding:22px 0 10px}
+.hero h1{font-size:clamp(2.1rem,5vw,3rem);max-width:22ch}
+.hero .lede{font-size:1.15rem;color:var(--ink-2);max-width:56ch}
+.hero .row{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center;margin:6px 0 26px}
+.hero .bigtel{font-family:var(--serif);font-size:clamp(1.6rem,4.5vw,2.1rem);font-weight:600;text-decoration:none;white-space:nowrap}
+.plat{background:var(--sheet);border:1px solid var(--rule);padding:10px}
+.plat svg{width:100%;height:auto;display:block}
+.plat .cap{font-size:.9rem;color:var(--ink-2);margin:8px 4px 2px}
+@media (prefers-reduced-motion:no-preference){
+  .flagpin{animation:plant .5s ease-out both}
+  .flagpin:nth-of-type(2){animation-delay:.1s}.flagpin:nth-of-type(3){animation-delay:.2s}.flagpin:nth-of-type(4){animation-delay:.3s}.flagpin:nth-of-type(5){animation-delay:.4s}.flagpin:nth-of-type(6){animation-delay:.5s}
+}
+@keyframes plant{from{opacity:.25}to{opacity:1}}
+
+section{padding:56px 0;border-top:1px solid var(--rule)}
+.help dl{display:grid;gap:26px;margin:0}
+.help dt{font-family:var(--serif);font-size:1.45rem;font-weight:600}
+.help dd{margin:0}
+@media(min-width:820px){.help dl{grid-template-columns:repeat(3,1fr);gap:36px}}
+.small{font-size:.92rem;color:var(--ink-2)}
+
+.lst{list-style:none;margin:0;padding:0}
+.lst li{display:grid;grid-template-columns:110px 1fr;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--rule)}
+.lst .slot{aspect-ratio:4/3;background:repeating-linear-gradient(0deg,#e5eae6 0 1px,transparent 1px 12px),repeating-linear-gradient(90deg,#e5eae6 0 1px,#f6f8f5 1px 12px);border:1px solid var(--rule);font-size:.72rem;line-height:1.25;color:var(--ink-2);display:flex;align-items:center;justify-content:center;text-align:center;padding:6px}
+.lst b{font-family:var(--serif);font-size:1.35rem;font-weight:600}
+.lst span{display:block;color:var(--ink-2);font-size:.95rem}
+@media(min-width:700px){.lst li{grid-template-columns:150px 1fr auto}.lst b{order:3}}
+
+.about .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:32px}
+.about .wrap>*{min-width:0}
+.about img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:60% 30%;border:1px solid var(--rule)}
+@media(min-width:820px){.about .wrap{grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:center}}
+.facts{display:flex;flex-wrap:wrap;gap:10px 28px;margin:18px 0;padding:0;list-style:none}
+.facts li b{font-family:var(--serif);font-size:1.6rem;display:block;line-height:1.1}
+.facts li{font-size:.92rem;color:var(--ink-2)}
+
+.rv{columns:1;column-gap:40px}
+@media(min-width:820px){.rv{columns:2}}
+.rv figure{break-inside:avoid;margin:0 0 28px}
+.rv blockquote{margin:0;font-family:var(--serif);font-size:1.1rem;line-height:1.55}
+.rv figcaption{margin-top:6px;font-weight:700}
+.rv figcaption span{color:var(--flag)}
+
+.towns p{max-width:none}
+
+.contact .wrap{display:grid;gap:36px}
+@media(min-width:820px){.contact .wrap{grid-template-columns:1fr 1fr}}
+form{background:var(--sheet);border:1px solid var(--rule);padding:22px}
+label{display:block;font-weight:600;margin:12px 0 4px;font-size:.98rem}
+input,select,textarea{width:100%;font:inherit;padding:9px 11px;border:1px solid #8f9a9f;background:#fff;color:var(--ink);border-radius:2px}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--ink);outline-offset:1px}
+input:user-invalid{border-color:var(--flag);background:#fff4f8}
+.opt{font-weight:400;color:var(--ink-2)}
+button{margin-top:16px;font:inherit;font-weight:700;background:var(--flag);color:#fff;border:0;padding:12px 20px;border-radius:2px;cursor:pointer}
+button:hover{background:#a3164f}
+.sent{display:none;margin-top:14px;padding:12px;border:1px solid var(--contour);background:#eef2ea}
+form.done .sent{display:block}
+dl.c{margin:0}dl.c dt{font-weight:700;margin-top:12px}dl.c dd{margin:0}
+
+.changes summary{cursor:pointer;font-family:var(--serif);font-size:1.4rem;font-weight:600}
+.changes li{margin-bottom:.5em;max-width:75ch}
+footer{border-top:1px solid var(--rule);padding:30px 0 100px;font-size:.9rem;color:var(--ink-2)}
+footer img{height:14px;width:auto;margin-bottom:10px}
+@media(min-width:760px){footer{padding-bottom:30px}}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:9;display:flex;gap:8px}
+.sticky a{flex:1;text-align:center;padding:13px 8px;font-weight:700;text-decoration:none;border-radius:2px;box-shadow:0 2px 10px rgba(29,51,73,.25)}
+.sticky .c{background:var(--flag);color:#fff}
+.sticky .t{background:var(--ink);color:#fff}
+@media(min-width:760px){.sticky{display:none}}
+</style>
+</head>
+<body>
+<div class="concept">Design concept for Oleksii Humaniuk. Not the live site.</div>
+
+<header>
+  <div class="wrap">
+    <a class="name" href="#top">Oleksii Humaniuk<span>REALTOR and mortgage broker, RE/MAX Performance Realty</span></a>
+    <a class="tel" href="tel:+15408309017">540.830.9017</a>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <h1>I know these lots, these towns, and the loan that buys them.</h1>
+    <p class="lede">Harrisonburg REALTOR and licensed mortgage broker. I help people buy and sell homes across the Shenandoah Valley, and I can do your pre-approval myself.</p>
+    <div class="row">
+      <a class="bigtel" href="tel:+15408309017">Call or text 540.830.9017</a>
+      <a class="btn" href="#contact">Book a free consultation</a>
+    </div>
+    <figure class="plat" style="margin:0">
+      <svg viewBox="0 0 900 540" role="img" aria-labelledby="pT">
+        <title id="pT">A surveyor's plat of the Shenandoah Valley around Harrisonburg, with pink survey flags at the towns Oleksii works in</title>
+        <defs>
+          <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#e3e8e4" stroke-width="1"/></pattern>
+        </defs>
+        <rect width="900" height="540" fill="url(#grid)"/>
+        <rect x="8" y="8" width="884" height="524" fill="none" stroke="#1d3349" stroke-width="2"/>
+        <rect x="14" y="14" width="872" height="512" fill="none" stroke="#1d3349" stroke-width=".75"/>
+        <!-- Massanutten contours -->
+        <g fill="none" stroke="#6b7f5c" stroke-width="1.2">
+          <path d="M560 60 C640 40 760 70 780 140 C800 210 720 260 640 250 C570 240 520 180 530 120 C535 90 545 70 560 60Z"/>
+          <path d="M580 85 C640 70 735 95 750 150 C765 200 705 232 645 225 C590 218 555 175 560 130 C563 108 570 92 580 85Z"/>
+          <path d="M600 108 C650 98 712 118 722 157 C732 192 690 210 648 205 C610 200 585 172 588 140 C590 124 594 114 600 108Z"/>
+          <path d="M622 130 C655 124 694 138 698 162 C702 182 676 192 652 188 C630 184 614 168 616 150 C617 140 619 134 622 130Z"/>
+          <path d="M640 150 C660 147 678 154 678 166 C678 176 664 179 652 177 C641 175 634 167 635 159Z"/>
+        </g>
+        <text x="652" y="115" font-family="Overpass,sans-serif" font-size="13" fill="#4f6343" text-anchor="middle" font-style="italic">Massanutten Mtn</text>
+        <!-- Blue Ridge edge -->
+        <path d="M760 300 C800 330 830 390 870 420" fill="none" stroke="#6b7f5c" stroke-width="1.2" stroke-dasharray="2 5"/>
+        <!-- roads -->
+        <path d="M150 532 L330 360 L420 280 L470 170 L505 14" fill="none" stroke="#1d3349" stroke-width="3"/>
+        <text transform="translate(258 438) rotate(-44)" font-family="Overpass,sans-serif" font-size="12" font-weight="700" fill="#1d3349">I-81</text>
+        <path d="M14 300 L200 296 L420 282 L560 300 L700 318 L886 336" fill="none" stroke="#1d3349" stroke-width="1.6" stroke-dasharray="10 4"/>
+        <text x="780" y="320" font-family="Overpass,sans-serif" font-size="12" font-weight="700" fill="#1d3349">Rt 33</text>
+        <!-- one surveyed lot with bearings -->
+        <path d="M366 246 L476 230 L490 314 L380 330 Z" fill="#fbfcfa" stroke="#1d3349" stroke-width="1.5"/>
+        <text x="428" y="280" font-family="Source Serif 4,serif" font-size="17" font-weight="600" fill="#1d3349" text-anchor="middle">Harrisonburg</text>
+        <text x="428" y="298" font-family="Overpass,sans-serif" font-size="10" fill="#4b5966" text-anchor="middle">office, 2511 E Market St</text>
+        <text transform="translate(386 238) rotate(-8)" font-family="Overpass,sans-serif" font-size="9" fill="#4b5966">N 80°30' E</text>
+        <text transform="translate(492 250) rotate(80)" font-family="Overpass,sans-serif" font-size="9" fill="#4b5966">S 10°50' E</text>
+        <!-- town labels -->
+        <g font-family="Overpass,sans-serif" font-size="13" fill="#1d3349" font-weight="600">
+          <text x="352" y="128">Broadway</text>
+          <text x="262" y="92">Timberville</text>
+          <text x="278" y="348">Dayton</text>
+          <text x="236" y="408">Bridgewater</text>
+          <text x="356" y="452">Mount Crawford</text>
+          <text x="500" y="352">Penn Laird</text>
+          <text x="566" y="282">McGaheysville</text>
+          <text x="720" y="370">Elkton</text>
+          <text x="170" y="520">to Staunton and Waynesboro</text>
+        </g>
+        <!-- survey flags -->
+        <g fill="#c41e63" stroke="#1d3349" stroke-width="1">
+          <g class="flagpin"><line x1="345" y1="134" x2="345" y2="112"/><path d="M345 112 l14 4 l-14 4z"/></g>
+          <g class="flagpin"><line x1="430" y1="232" x2="430" y2="208"/><path d="M430 208 l16 5 l-16 5z"/></g>
+          <g class="flagpin"><line x1="296" y1="414" x2="296" y2="392"/><path d="M296 392 l14 4 l-14 4z"/></g>
+          <g class="flagpin"><line x1="606" y1="288" x2="606" y2="266"/><path d="M606 266 l14 4 l-14 4z"/></g>
+          <g class="flagpin"><line x1="652" y1="196" x2="652" y2="174"/><path d="M652 174 l14 4 l-14 4z"/></g>
+          <g class="flagpin"><line x1="740" y1="376" x2="740" y2="354"/><path d="M740 354 l14 4 l-14 4z"/></g>
+        </g>
+        <!-- north arrow -->
+        <g transform="translate(70 70)" fill="none" stroke="#1d3349" stroke-width="1.4">
+          <circle r="26"/><path d="M0 -24 L8 10 L0 4 L-8 10 Z" fill="#1d3349"/>
+          <text y="-32" text-anchor="middle" font-family="Overpass,sans-serif" font-size="13" font-weight="700" fill="#1d3349" stroke="none">N</text>
+        </g>
+        <!-- title block -->
+        <g font-family="Overpass,sans-serif" fill="#1d3349">
+          <rect x="606" y="430" width="270" height="88" fill="#fbfcfa" stroke="#1d3349" stroke-width="1.2"/>
+          <line x1="606" y1="458" x2="876" y2="458" stroke="#1d3349"/>
+          <text x="618" y="450" font-family="Source Serif 4,serif" font-size="15" font-weight="600">Plat of the Valley, sheet 1 of 1</text>
+          <text x="618" y="478" font-size="11">Prepared for buyers and sellers by</text>
+          <text x="618" y="494" font-size="11" font-weight="700">Oleksii Humaniuk, RE/MAX Performance Realty</text>
+          <text x="618" y="510" font-size="11">Not to scale. Flags mark towns I work in.</text>
+        </g>
+      </svg>
+      <figcaption class="cap">Harrisonburg, Rockingham County, Massanutten and the towns around them. The full list is further down.</figcaption>
+    </figure>
+  </div>
+</div>
+
+<section class="help" aria-labelledby="hh">
+  <div class="wrap">
+    <h2 id="hh">Three ways I help</h2>
+    <dl>
+      <div><dt>Buying</dt><dd><p>A free first meeting, then your real budget and pre-approval from me (you can still use any lender). Live MLS alerts, tours, offers priced from recent sales, and everything from inspection to the final walkthrough. One recent buyer saved $15,000.</p><p class="small">Virginia Housing, first-time buyer grants, FHA, VA and USDA.</p></dd></div>
+      <div><dt>Selling</dt><dd><p>Your home value by text within 24 hours, priced from local comparable sales. Professional photos, staging advice, and the major buyer sites. I check each buyer's pre-approval so fewer deals fall through. Commission is negotiable and in writing.</p></dd></div>
+      <div><dt>Refinancing</dt><dd><p>See your new payment, monthly savings and break-even time before you decide. <a href="https://humaniuk.homes/refinance/">Refinance calculator</a></p><p class="small">Oleksii Humaniuk NMLS #2578791, through Alcova Mortgage NMLS #40508.</p></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section aria-labelledby="lh">
+  <div class="wrap">
+    <h2 id="lh">On the market with me</h2>
+    <!-- Live site: keep the MLS feed. -->
+    <ul class="lst">
+      <li><div class="slot">MLS photo of the house</div><div>3961 Oak Ridge Rd, Mount Crawford<span>6 beds, 7 baths, 10,599 sq ft on 10.49 acres</span></div><b>$2,690,000</b></li>
+      <li><div class="slot">MLS photo of the house</div><div>1670 Briarcrest Dr, Rockingham<span>5 beds, 4 baths, 3,882 sq ft on 0.3 acres</span></div><b>$500,000</b></li>
+      <li><div class="slot">MLS photo of the house</div><div>10235 Dalmatian Dr, McGaheysville<span>3 beds, 3 baths, 2,032 sq ft on 0.17 acres</span></div><b>$420,000</b></li>
+    </ul>
+    <p class="small" style="margin-top:14px">Outside the Valley: 0.95 acres at 20576 Ashburn Rd, Ashburn (Loudoun County), $900,000. <a href="https://humaniuk.homes/my-listings/">All listings</a></p>
+  </div>
+</section>
+
+<section class="about" aria-labelledby="ah">
+  <div class="wrap">
+    <img src="https://humaniuk.homes/wp-content/themes/humaniuk-luxury/assets/img/hero.jpg" alt="Oleksii Humaniuk at his desk" width="1252" height="1313" loading="lazy">
+    <div>
+      <h2 id="ah">From Ukraine to Harrisonburg, here since 2014</h2>
+      <p>I went to Eastern Mennonite High School and Bridgewater College, and I've helped people buy and sell in the Valley since. Being the agent and the mortgage broker means the house, the offer and the money stay with one person.</p>
+      <ul class="facts">
+        <li><b>99</b>homes sold</li><li><b>$33.0M</b>total sales</li><li><b>63</b>sold, past 2 years</li><li><b>5.0</b>Google, 45 reviews</li>
+      </ul>
+      <p>English, Ukrainian and Russian. RealTrends Verified. Virginia license <span class="ph">[License #]</span></p>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="rh">
+  <div class="wrap">
+    <h2 id="rh">In their words</h2>
+    <!-- Reviews from the current site. Paste exact Google text before launch. -->
+    <div class="rv">
+      <figure><blockquote>Oleksii was the very best agent we've ever had. Smart, professional, hard working, creative and a great personality! He was always available and the personal touches and care he showed were admirable. A five star rating doesn't seem high enough.</blockquote><figcaption><span aria-label="5 stars">★★★★★</span> Denise Morris</figcaption></figure>
+      <figure><blockquote>We had a great experience working with Oleksii to buy a vacation property. He was available whenever we had questions and was flexible to help us look at homes from out of state. Highly recommend!</blockquote><figcaption><span aria-label="5 stars">★★★★★</span> Andrew Worden</figcaption></figure>
+      <figure><blockquote>Oleksii did such a great [job] finding us a home and helping us sell our home. He always went above and beyond with anything we needed and he was really easy to work with schedule wise.</blockquote><figcaption><span aria-label="5 stars">★★★★★</span> Heidy Godinez</figcaption></figure>
+      <figure><blockquote>He was professional, responsive, and always willing to help and answer my questions. He made the process much easier and less stressful.</blockquote><figcaption><span aria-label="5 stars">★★★★★</span> Asuncion Bautista</figcaption></figure>
+      <figure><blockquote>Oleksii did an amazing job helping us buy our house. He was very professional and quick to respond to any questions or concerns we had.</blockquote><figcaption><span aria-label="5 stars">★★★★★</span> Dennis Kutsyi</figcaption></figure>
+    </div>
+    <p>5.0 from 45 Google reviews. <a href="https://www.google.com/search?q=Oleksii+Humaniuk+RE%2FMAX+Performance+Realty+Harrisonburg">Find us on Google</a></p>
+  </div>
+</section>
+
+<section class="towns" aria-labelledby="th">
+  <div class="wrap">
+    <h2 id="th">Every town on the sheet</h2>
+    <p><b>Harrisonburg:</b> Old Town, Downtown, Park View, Northside Village, Cobblers Valley, Preston Lake, Congers Creek, Crossroads Farm.</p>
+    <p><b>Rockingham County:</b> Bridgewater, McGaheysville, Dayton, Penn Laird, Mount Crawford, Broadway, Elkton, Timberville.</p>
+    <p><b>Further out:</b> Staunton, Waynesboro, Augusta County, Shenandoah County, Page County, Massanutten, Bryce Resort.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="ch">
+  <div class="wrap">
+    <div>
+      <h2 id="ch">Start with a conversation</h2>
+      <p>Free, no pressure, in person, by phone or on video.</p>
+      <dl class="c">
+        <dt>Call or text</dt><dd><a class="nowrap" href="tel:+15408309017">540.830.9017</a></dd>
+        <dt>Email</dt><dd><a href="mailto:oleksii@humaniuk.homes">oleksii@humaniuk.homes</a></dd>
+        <dt>Office</dt><dd>2511 E Market St, Ste A, Harrisonburg, VA 22801</dd>
+        <dt>Hours</dt><dd><span class="ph">[Office hours]</span></dd>
+      </dl>
+    </div>
+    <form id="f" novalidate>
+      <label for="n">Name</label><input id="n" required autocomplete="name">
+      <label for="p">Phone</label><input id="p" type="tel" required autocomplete="tel">
+      <label for="e">Email <span class="opt">(optional)</span></label><input id="e" type="email" autocomplete="email">
+      <label for="s">I want to</label><select id="s"><option>Buy</option><option>Sell</option><option>Buy and sell</option><option>Refinance</option><option>Something else</option></select>
+      <label for="m">Message</label><textarea id="m" rows="4"></textarea>
+      <button type="submit">Send to Oleksii</button>
+      <p class="sent" role="status">Design concept: nothing was sent. On the live site this reaches Oleksii directly.</p>
+    </form>
+  </div>
+</section>
+
+<section class="changes" aria-label="What changed">
+  <div class="wrap">
+    <details>
+      <summary>What changed from the current site</summary>
+      <ul>
+        <li>The phone number and "call or text" are in the first screen, with a tap to call bar on phones.</li>
+        <li>The homepage numbers appeared twice. They're shown once.</li>
+        <li>The Ashburn lot (Loudoun County) sat under "across the Shenandoah Valley". It's now labeled as outside the Valley.</li>
+        <li>Two of the five Google reviews were hidden behind "Show more reviews". All five show, and the stray "G" before the rating is gone.</li>
+        <li>"See all 9 areas" showed three. Every town and neighborhood is listed.</li>
+        <li>The footer "Book a Consultation" button linked to "#". Every booking link now goes to the form.</li>
+        <li>NMLS numbers (#2578791 and Alcova Mortgage #40508) were only on the refinance page. They're now on the homepage.</li>
+        <li>No office hours are listed anywhere. There's a placeholder for them.</li>
+        <li>Services are written as what Oleksii actually does, instead of luxury template phrases.</li>
+        <li>Photos have alt text and the menu button has a label.</li>
+        <li>To fix at the source: Oak Ridge Rd copy says 8,900 sq ft but the stats say 10,599; Briarcrest says nearly 3,000 but the stats say 3,882; "Dont" and "an highly" in listing text; "Mcgaheysville" capitalization from the feed.</li>
+        <li>Also on inner pages: stray "Edit" and "Website" labels on the seller forms, all three how-to video thumbnails link to the same page, and the meta and social descriptions are identical.</li>
+      </ul>
+    </details>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="https://humaniuk.homes/wp-content/themes/humaniuk-luxury/assets/img/remax-ink.png" alt="RE/MAX Performance Realty" width="120" height="21">
+    <p>Oleksii Humaniuk, REALTOR, RE/MAX Performance Realty. Licensed in Virginia. Equal Housing Opportunity. Mortgage broker NMLS #2578791 through Alcova Mortgage NMLS #40508.</p>
+    <p>© 2026 Oleksii Humaniuk. <a href="https://humaniuk.homes/privacy-policy/">Privacy policy</a></p>
+  </div>
+</footer>
+<div class="sticky"><a class="c" href="tel:+15408309017">Call 540.830.9017</a><a class="t" href="sms:+15408309017">Text</a></div>
+<script>
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();if(!this.checkValidity()){this.reportValidity();return}this.classList.add('done')});
+</script>
+</body>
+</html>
